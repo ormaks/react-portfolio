@@ -1,0 +1,14 @@
+.contact_content {
+    height: 90%;
+    top: 5%;
+    left: 55px;
+    min-height: 566px;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}

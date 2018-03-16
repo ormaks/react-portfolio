@@ -1,0 +1,61 @@
+* {
+    /*cursor: url(../img/xxx012-32.png), pointer !important;*/
+    cursor: url(../img/cursor.cur) , pointer !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+    background: #252627;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+    color: #fff;
+}
+
+.tags {
+    color: #515152;
+    margin-left: 30px;
+    font-size: 18px;
+    font-family: 'MyTags', cursive;
+}
+
+.tag_h1 {
+    color: #515152;
+    font-size: 18px;
+    font-family: 'MyTags', cursive;
+}
+
+.text_h1 {
+    font-size: 56px;
+    line-height: 53px;
+    margin: 0;
+    font-family: "MyHeader", sans-serif;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MyTags';
+    src: url('../fonts/LaBelleAurore.ttf');
+}
+
+@font-face {
+    font-family: 'MyHeader';
+    src: url('../fonts/Millunium-BOLD.ttf');
+}
+
+@font-face {
+    font-weight: normal;
+    font-family: 'MyLogo';
+    src: url('../fonts/DancingScript-Regular.ttf');
+}
+@font-face {
+    font-weight: bold;
+    font-family: 'MyLogo';
+    src: url('../fonts/DancingScript-Bold.ttf');
+}
+
