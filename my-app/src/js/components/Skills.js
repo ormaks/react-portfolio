@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import '../../css/skills.css';
-
 class Skills extends Component {
-
-
     render() {
         return (
             <div className="skills_content">
@@ -34,29 +31,29 @@ class Skills extends Component {
                             </div>
                             <div id="tags">
                                 <ul>
-                                    <li><a href="#">HTML5</a></li>
-                                    <li><a href="#">CSS3</a></li>
-                                    <li><a href="#">npm</a></li>
-                                    <li><a href="#">Angular</a></li>
-                                    <li><a href="#">ReactJS</a></li>
-                                    <li><a href="#">JavaScript</a></li>
-                                    <li><a href="#">TypeScript</a></li>
-                                    <li><a href="#">C#</a></li>
-                                    <li><a href="#">C++</a></li>
-                                    <li><a href="#">Sass</a></li>
-                                    <li><a href="#">.Net</a></li>
-                                    <li><a href="#">jQuery</a></li>
-                                    <li><a href="#">ES6</a></li>
-                                    <li><a href="#">ES5</a></li>
-                                    <li><a href="#">AJAX</a></li>
-                                    <li><a href="#">Canvas</a></li>
-                                    <li><a href="#">JSON</a></li>
-                                    <li><a href="#">Git</a></li>
-                                    <li><a href="#">Bootstrap</a></li>
-                                    <li><a href="#">Flexbox</a></li>
-                                    <li><a href="#">TiemViewer</a></li>
-                                    <li><a href="#">XML</a></li>
-                                    <li><a href="#">SVG</a></li>
+                                    <li><a>HTML5</a></li>
+                                    <li><a>CSS3</a></li>
+                                    <li><a>npm</a></li>
+                                    <li><a>Angular</a></li>
+                                    <li><a>ReactJS</a></li>
+                                    <li><a>JavaScript</a></li>
+                                    <li><a>TypeScript</a></li>
+                                    <li><a>C#</a></li>
+                                    <li><a>C++</a></li>
+                                    <li><a>Sass</a></li>
+                                    <li><a>.Net</a></li>
+                                    <li><a>jQuery</a></li>
+                                    <li><a>ES6</a></li>
+                                    <li><a>ES5</a></li>
+                                    <li><a>AJAX</a></li>
+                                    <li><a>Canvas</a></li>
+                                    <li><a>JSON</a></li>
+                                    <li><a>Git</a></li>
+                                    <li><a>Bootstrap</a></li>
+                                    <li><a>Flexbox</a></li>
+                                    <li><a>TiemViewer</a></li>
+                                    <li><a>XML</a></li>
+                                    <li><a>SVG</a></li>
                                 </ul>
                             </div>
                         </div>

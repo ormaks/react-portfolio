@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 import '../../css/home.css';
 
 class Home extends Component {
@@ -14,7 +15,7 @@ class Home extends Component {
                         <span className="text_h1"> web developer. </span>
                         <span className="tag_h1">&lt;h1/&gt;</span> <br/>
                         <h2 className="h2_greating">Front End Developer / React / Angular</h2>
-                        <a href="#" className="contact_btn">Contact me</a>
+                        <Link to="/contact" className="contact_btn">Contact me</Link>
                     </div>
                     <span className="tags">&nbsp;&nbsp;&nbsp;&lt;body/&gt; <br/> &lt;html/&gt;</span>
                 </div>

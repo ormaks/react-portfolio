@@ -3,6 +3,10 @@
     cursor: url(../img/cursor.cur) , pointer !important;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     margin: 0;
     padding: 0;
