@@ -25,16 +25,12 @@ class About extends Component {
                     <p>Now I'm testing myself in freelance, but I'm open to any suggestions!</p>
                 </div>
                 <div className="player">
-                    <iframe width="100%" frameBorder="no" allow="autoplay"
+                    <iframe width="100%" frameBorder="no" allow="autoplay" title="music"
                             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/405996411&
                             color=%23000000&auto_play=true&hide_related=false&show_comments=true&show_user=true&
                             show_reposts=false&show_teaser=true"> </iframe>
-                    <iframe width="100%" frameBorder="no"
+                    <iframe width="100%" frameBorder="no" title="music"
                             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/449348937&
-                            color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&
-                            show_reposts=false&show_teaser=true"> </iframe>
-                    <iframe width="100%" frameBorder="no"
-                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/381116654&
                             color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&
                             show_reposts=false&show_teaser=true"> </iframe>
                 </div>

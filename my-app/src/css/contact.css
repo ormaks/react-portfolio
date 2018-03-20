@@ -112,15 +112,15 @@
 }
 
 .contact_main > .right_side {
-    width: 60%;
-    height: 110%;
+    width: 65%;
+    height: 114%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 0;
-    top: -5%;
-    clip-path:  polygon(0% 0%,100% 0%,100% 100%,25% 100%);
+    right: -5%;
+    top: -6%;
+    clip-path: polygon(0% 0%,100% 0%,100% 100%,25% 100%);
 }
 
 .contact_main > .right_side > div#map {

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import GoogleMapReact from 'google-map-react';
-import Snap, {mina} from 'react-dom';
+import Map from 'google-map-react';
+// import Snap, {mina} from 'react-dom';
 import '../../css/contact.css';
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 
+// const demoFancyMapStyles = import from "./demoFancyMapStyles.json";
 class Contact extends Component {
     /* constructor(){
          super();
@@ -48,89 +48,96 @@ class Contact extends Component {
      }
  */
 
+    // noinspection JSAnnotator
     static defaultProps = {
-        center: {lat: 59.95, lng: 30.33},
-        zoom: 11,
+        center: {lat: 49.843, lng: 24.025},
+        zoom: 13,
         defaultVisible: false,
-        styles: [
+        mapStyles : [
             {
-                "featureType": "administrative",
-                "elementType": "labels",
+                "featureType": "all",
+                "elementType": "labels.text.fill",
                 "stylers": [
                     {
-                        "visibility": "simplified"
+                        "color": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "featureType": "all",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "visibility": "off"
                     }
                 ]
             },
             {
                 "featureType": "administrative",
-                "elementType": "labels.text.fill",
+                "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#444444"
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#012621"
+                    },
+                    {
+                        "weight": 0.8
                     }
                 ]
             },
             {
                 "featureType": "administrative.country",
-                "elementType": "all",
+                "elementType": "labels",
                 "stylers": [
                     {
-                        "visibility": "off"
+                        "color": "#012621"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.country",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "color": "#0c0000"
                     }
                 ]
             },
             {
                 "featureType": "administrative.province",
-                "elementType": "all",
+                "elementType": "labels.text",
                 "stylers": [
                     {
-                        "visibility": "off"
+                        "color": "#012621"
                     }
                 ]
             },
             {
                 "featureType": "administrative.locality",
-                "elementType": "all",
+                "elementType": "labels.text",
                 "stylers": [
                     {
-                        "visibility": "off"
+                        "color": "#012621"
                     }
                 ]
             },
             {
                 "featureType": "administrative.neighborhood",
-                "elementType": "all",
+                "elementType": "labels.text",
                 "stylers": [
                     {
-                        "visibility": "off"
+                        "color": "#012621"
                     }
                 ]
             },
             {
                 "featureType": "landscape",
-                "elementType": "all",
+                "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#f2f2f2"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "landscape.man_made",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "lightness": "0"
+                        "color": "#06c5a9"
                     }
                 ]
             },
@@ -139,278 +146,99 @@ class Contact extends Component {
                 "elementType": "all",
                 "stylers": [
                     {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "saturation": -100
+                        "color": "#06c5a9"
                     },
                     {
-                        "lightness": 45
+                        "lightness": -7
                     }
                 ]
             },
             {
-                "featureType": "road",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "road",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway",
+                "featureType": "poi.park",
                 "elementType": "all",
                 "stylers": [
                     {
-                        "visibility": "simplified"
+                        "color": "#06c5a9"
                     }
                 ]
             },
             {
-                "featureType": "road.highway",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.highway.controlled_access",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "geometry.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    },
-                    {
-                        "saturation": "3"
-                    },
-                    {
-                        "lightness": "-36"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
+                "featureType": "road",
                 "elementType": "geometry.stroke",
                 "stylers": [
                     {
-                        "visibility": "off"
+                        "color": "#ffffff"
+                    },
+                    {
+                        "weight": 0.3
+                    },
+                    {
+                        "lightness": 10
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "color": "#047968"
+                    },
+                    {
+                        "lightness": "-7"
                     }
                 ]
             },
             {
                 "featureType": "road.arterial",
-                "elementType": "labels",
+                "elementType": "geometry",
                 "stylers": [
                     {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "labels.text.fill",
-                "stylers": [
+                        "color": "#06c5a9"
+                    },
                     {
-                        "lightness": "-63"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "labels.text.stroke",
-                "stylers": [
+                        "visibility": "on"
+                    },
                     {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "off"
+                        "lightness": -15
                     }
                 ]
             },
             {
                 "featureType": "road.local",
-                "elementType": "all",
+                "elementType": "geometry",
                 "stylers": [
                     {
-                        "visibility": "off"
+                        "color": "#06c5a9"
+                    },
+                    {
+                        "lightness": "7"
                     }
                 ]
             },
             {
                 "featureType": "transit",
-                "elementType": "all",
+                "elementType": "geometry",
                 "stylers": [
                     {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels",
-                "stylers": [
+                        "color": "#06c5a9"
+                    },
                     {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels.text",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels.text.fill",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels.text.stroke",
-                "stylers": [
-                    {
-                        "visibility": "on"
-                    }
-                ]
-            },
-            {
-                "featureType": "transit",
-                "elementType": "labels.icon",
-                "stylers": [
-                    {
-                        "visibility": "on"
+                        "lightness": -34
                     }
                 ]
             },
             {
                 "featureType": "water",
-                "elementType": "all",
+                "elementType": "geometry",
                 "stylers": [
                     {
-                        "color": "#92c0d3"
-                    },
-                    {
-                        "visibility": "on"
+                        "color": "#333739"
                     }
                 ]
             }
         ]
     };
-
-
 
     render() {
         return (
@@ -444,13 +272,14 @@ class Contact extends Component {
                         </form>
                     </div>
                     <div className="right_side">
-                        <GoogleMapReact
+                        <Map google={this.props.google}
                             bootstrapURLKeys={{ key: ['AIzaSyBa7trDSsEedbuHDCqBFTLtJIAtSHYrg9s'] }}
-                            options={this.props.options}
-                            center={this.props.center}
-                            zoom={this.props.zoom}
+                            center={this.props.center }
+                            defaultZoom={this.props.zoom}
+                            options={{ styles: this.props.mapStyles }}
                         >
-                        </GoogleMapReact>
+
+                        </Map>
                     </div>
                 </div>
 
