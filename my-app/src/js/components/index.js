@@ -6,10 +6,10 @@ import Works from "./Works";
 import Contact from "./Contact";
 
 export {
-    Header,
-    Home,
-    About,
-    Skills,
-    Works,
-    Contact,
+	Header,
+	Home,
+	About,
+	Skills,
+	Works,
+	Contact,
 }

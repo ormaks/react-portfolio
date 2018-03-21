@@ -1,124 +1,124 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    width: 55px;
-    height: 100%;
-    min-height: 400px;
-    z-index: 3;
-    background: #181818;
-    /*cursor: pointer;*/
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	width: 55px;
+	height: 100%;
+	min-height: 400px;
+	z-index: 3;
+	background: #181818;
+	/*cursor: pointer;*/
 }
 
 header > div.logo {
-    background: #070707;
-    display: block;
-    padding: 5px 0 0;
+	background: #070707;
+	display: block;
+	padding: 5px 0 0;
 }
 
 header > div.logo > img {
-    animation: App-logo-spin infinite 20s linear;
-    display: block;
-    margin: 0 auto;
-    height: auto;
+	animation: App-logo-spin infinite 20s linear;
+	display: block;
+	margin: 0 auto;
+	height: auto;
 }
 
 header > div.logo > span {
-    display: block;
-    margin: 0 auto 5px;
-    font-size: 15px;
-    height: auto;
-    color: white;
-    text-align: center;
+	display: block;
+	margin: 0 auto 5px;
+	font-size: 15px;
+	height: auto;
+	color: white;
+	text-align: center;
 }
 
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 header > div.main_buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    text-align: center;
-    width: 100%;
-    height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+	text-align: center;
+	width: 100%;
+	height: 300px;
 }
 
 .main_buttons a {
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    /*cursor: pointer;*/
-    color: #4d4d4e;
-    height: 100%;
-    justify-content: center;
-    background: #181818;
-    width: 55px;
-    transition: 0.3s;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	/*cursor: pointer;*/
+	color: #4d4d4e;
+	height: 100%;
+	justify-content: center;
+	background: #181818;
+	width: 55px;
+	transition: 0.3s;
 }
 
 .main_buttons a:hover {
-    width: 65px;
+	width: 65px;
 }
 
 .fa-user, .fa-home, .fa-cog, .fa-eye, .fa-envelope {
-    text-transform: uppercase;
-    font-size: 22px;
-    display: block;
-    line-height: 51px;
-    margin: 0 auto;
-    height: 20px;
-    position: relative;
-    text-decoration: none;
-    /*cursor: pointer;*/
+	text-transform: uppercase;
+	font-size: 22px;
+	display: block;
+	line-height: 51px;
+	margin: 0 auto;
+	height: 20px;
+	position: relative;
+	text-decoration: none;
+	/*cursor: pointer;*/
 }
 
 .main_buttons a span {
-    font-weight: lighter;
-    text-transform: uppercase;
-    font-size: 8px;
-    padding: 0;
-    margin: 3px auto 0;
-    opacity: 0;
+	font-weight: lighter;
+	text-transform: uppercase;
+	font-size: 8px;
+	padding: 0;
+	margin: 3px auto 0;
+	opacity: 0;
 }
 
 .main_buttons a:hover, .main_buttons a:hover span {
-    opacity: 1;
-    color: #08fdd8;
-    transition: 0.5s;
-    text-decoration: none;
+	opacity: 1;
+	color: #08fdd8;
+	transition: 0.5s;
+	text-decoration: none;
 }
 
 .fa-user:hover, .fa-home:hover, .fa-cog:hover, .fa-eye:hover, .fa-envelope:hover, .fa-telegram-plane:hover, .fa-facebook-f:hover, .fa-instagram:hover {
-    color: #08fdd8;
+	color: #08fdd8;
 }
 
 header > div.social_buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: center;
-    text-align: center;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-content: center;
+	text-align: center;
+	width: 100%;
 }
 
 .fa-telegram-plane, .fa-facebook-f, .fa-instagram {
-    display: block;
-    padding: 5px 0;
-    margin: 0 auto;
-    height: 30px;
-    font-size: 15px;
-    line-height: 16px;
-    color: #4d4d4e;
-    /*cursor: pointer;*/
-    transition: 0.5s;
+	display: block;
+	padding: 5px 0;
+	margin: 0 auto;
+	height: 30px;
+	font-size: 15px;
+	line-height: 16px;
+	color: #4d4d4e;
+	/*cursor: pointer;*/
+	transition: 0.5s;
 }
