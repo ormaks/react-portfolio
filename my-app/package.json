@@ -2,16 +2,20 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ormaks.github.io/react-portfolio",
+  "homepage": "https://ormaks.github.io/react-portfolio/",
   "dependencies": {
-    "gh-pages": "^1.1.0",
     "google-map-react": "^0.34.0",
+    "prop-types": "latest",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-router": "latest",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-		"prop-types": "latest"
-	},
+    "react-scripts": "1.1.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

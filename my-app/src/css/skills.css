@@ -43,6 +43,7 @@
 	align-items: center;
 }
 
-.skills_main > .right_side div.sphere-tags {
+/*noinspection CssUnusedSymbol*/
+.skills_main > .tags_cloud div.sphere-tags {
 	display: none;
 }

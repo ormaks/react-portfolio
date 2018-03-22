@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-
-import '../vendor/tagcanvas.min'
 import '../../css/skills.css';
+import '../vendor/tagcanvas.min'
 
 // FIXME
 // setTimeout(console.clear, 2000);
@@ -89,7 +88,7 @@ class Sphere extends Component {
 }
 
 let Skills = () => (
-	<div className="skills_content">
+	<div className="skills_content transition-item">
 		<span className="tags">&nbsp;&nbsp;&nbsp;&lt;body&gt;</span>
 		<div className="skills_main">
 			<div className="left_side">
@@ -97,7 +96,6 @@ let Skills = () => (
 				<span className="text_h1"> Skills & </span> <br/>
 				<span className="text_h1"> Experience </span> <br/>
 				<span className="tag_h1">&lt;h1/&gt;</span> <br/>
-
 				<p>Hello, I am 20-year-old student from Ukraine.</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam architecto, atque
 					debitis

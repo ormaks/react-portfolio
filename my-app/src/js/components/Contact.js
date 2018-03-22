@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import Map from 'google-map-react';
 import '../../css/contact.css';
 
-
-// const demoFancyMapStyles = import from "./demoFancyMapStyles.json";
 class Contact extends Component {
 	/* constructor(){
 		 super();
@@ -46,7 +44,7 @@ class Contact extends Component {
 		 })();
 	 }
  */
-	// noinspection JSAnnotator
+
 	static defaultProps = {
 		center: {lat: 49.843, lng: 24.025},
 		zoom: 8,
@@ -277,7 +275,6 @@ class Contact extends Component {
 						</Map>
 					</div>
 				</div>
-
 				<span className="tags">&nbsp;&nbsp;&nbsp;&lt;/body&gt; <br/> &lt;/html&gt;</span>
 			</div>
 		);
