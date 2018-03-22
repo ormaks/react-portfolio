@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {Route, Switch, Redirect} from "react-router-dom";
+import React from 'react';
+import {Redirect, Route, Switch} from "react-router-dom";
 import {About, Contact, Header, Home, Skills,} from '../js/components';
-
+/*
 class Loader extends Component {
 	constructor(props) {
 		super(props);
@@ -29,13 +29,13 @@ class Loader extends Component {
 		}
 	}
 
-	/*
+	/!*
 		componentWillUnmount() {
 			this.setState({
 				loadStatus: 0
 			})
 		}
-	*/
+	*!/
 
 	render() {
 		const Comp = this.props.component;
@@ -46,19 +46,24 @@ class Loader extends Component {
 			() => (<div>Component is loading {this.state.loadStatus}%</div>);
 		return <Body/>;
 	}
-}
+}*/
+
+const prefix = "/react-portfolio";
 
 let Layout = () => (
 	<div>
 		<Header/>
-		<Switch>
-			<Redirect from={"/index.html"} to={"/"}/>
-			<Route exact path={"/"} component={Home}/>
-			<Route exact path={"/about"} component={About}/>
-			<Route exact path={"/skills"} component={Skills}/>
-			{/*<Route exact path={"/works"} component={Works}/>*/}
-			<Route exact path={"/contact"} component={Contact}/>
-		</Switch>
+		<Redirect from={"/"} to={prefix}/>
+		<Route path={prefix}>
+			<Switch>
+				<Redirect from={prefix + "/index.html"} to={prefix + "/"}/>
+				<Route exact path={prefix + "/"} component={Home}/>
+				<Route path={prefix + "/about"} component={About}/>
+				<Route path={prefix + "/skills"} component={Skills}/>
+				{/*<Route exact path={prefix + "/works"} component={Works}/>*/}
+				<Route path={prefix + "/contact"} component={Contact}/>
+			</Switch>
+		</Route>
 	</div>
 );
 
