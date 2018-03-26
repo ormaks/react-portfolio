@@ -127,3 +127,10 @@
 	height: 400px;
 	width: 100%;
 }
+
+body .infoBox {
+	width: 300px !important;
+	transform: none !important;
+	left: -170px !important;
+	overflow: inherit !important;
+}
