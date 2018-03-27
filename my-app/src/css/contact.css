@@ -65,6 +65,8 @@
 	padding: 0 20px;
 	box-sizing: border-box;
 	font-family: monospace;
+	transition: .3s all linear;
+	border-bottom: 2px solid #08fdd8;
 }
 
 .contact_main form div.input_row div.half {
@@ -72,7 +74,7 @@
 }
 
 .contact_main form div.input_row div.half > input {
-	width: 99%;
+	width: 98%;
 	border: 0;
 	background: #37393b;
 	height: 50px;
@@ -80,10 +82,13 @@
 	color: #8d8d8d;
 	padding: 0 20px;
 	box-sizing: border-box;
+	transition: .3s all linear;
+	border-bottom: 2px solid #08fdd8;
 }
 
 .contact_main form div.input_row div.half:nth-child(2) > input {
-	margin-left: 2%;
+	width: 98%;
+	margin-left: 4%;
 }
 
 .contact_main form > div > textarea {
@@ -98,6 +103,8 @@
 	min-height: 150px;
 	max-height: 250px;
 	resize: vertical;
+	border-bottom: 2px solid #08fdd8;
+	transition: .3s border linear;
 }
 
 .contact_main form > div > input#submit {
@@ -137,4 +144,8 @@ body .infoBox {
 	width: 250px !important;
 	transform: none !important;
 	overflow: inherit !important;
+}
+
+.error {
+	border-bottom: 2px solid red !important;
 }

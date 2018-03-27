@@ -3,11 +3,12 @@ import {compose, withProps, withStateHandlers} from "recompose"
 import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps";
 import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
 import {VelocityComponent} from 'velocity-react';
+import validator from 'validator'
 
 import '../../css/contact.css';
 import logo from '../../img/MyMarker.png';
 
-const defaultProps = {
+let defaultProps = {
 	/*GOOGLE MAPS PROPS*/
 	center: {lat: 49.8431, lng: 24.02607},
 	zoom: 14,
@@ -239,9 +240,12 @@ const defaultProps = {
 			float: 'left',
 			height: 0
 		}
-	}
+	},
+
+
 };
 
+/*GOOGLE MAPS FUNC*/
 const StyledMapWithAnInfoBox = compose(
 	withProps({
 		googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBa7trDSsEedbuHDCqBFTLtJIAtSHYrg9s&v=3.exp&libraries=geometry,drawing,places",
@@ -285,6 +289,7 @@ const StyledMapWithAnInfoBox = compose(
 		</Marker>
 	</GoogleMap>
 );
+/*END GOOGLE MAPS FUNC*/
 
 /*flyLetter ANIMATION*/
 const VelocityLetter = ({letter}) => (
@@ -296,8 +301,59 @@ const VelocityLetter = ({letter}) => (
 		<p style={defaultProps.flyLetterStyles.letter}>{letter}</p>
 	</VelocityComponent>
 );
+/*END flyLetter ANIMATION*/
+
+/*VALIDATION MAPS FUNC*/
+function validate(email, msg) {
+	return {
+		email: !validator.isEmail(email),
+		msg: msg.length <= 10,
+	};
+}
+/*END VALIDATION MAPS FUNC*/
 
 class Contact extends Component {
+	/*VALIDATION p1*/
+	constructor() {
+		super();
+		this.state = {
+			email: '',
+			msg: '',
+
+			touched: {
+				email: false,
+				msg: false,
+			},
+		};
+	}
+	handleMsgChange = (evt) => {
+		this.setState({msg: evt.target.value});
+
+
+		const letters = evt.target.value.split('');
+		const arr = [];
+		letters.forEach((l, i) => {
+			arr.push(<VelocityLetter letter={l} key={i}/>)
+		});
+		this.setState(() => ({letters: arr}))
+	};
+	handleEmailChange = (evt) => {
+		this.setState({email: evt.target.value});
+		
+		const letters = evt.target.value.split('');
+		const arr = [];
+		letters.forEach((l, i) => {
+			arr.push(<VelocityLetter letter={l} key={i}/>)
+		});
+		this.setState(() => ({letters: arr}))
+	};
+	handleBlur = (field) => () => {
+		this.setState({
+			touched: {...this.state.touched, [field]: true},
+		});
+	};
+	/*END VALIDATION p1*/
+	
 	/*flyLetter ANIMATION*/
 	state = {
 		letters: [],
@@ -310,8 +366,19 @@ class Contact extends Component {
 		});
 		this.setState(() => ({letters: arr}))
 	};
+	/*flyLetter ANIMATION*/
 
 	render() {
+		/*VALIDATION p1*/
+		const errors = validate(this.state.email, this.state.msg);
+		const shouldMarkError = (field) => {
+			const hasError = errors[field];
+			const shouldShow = this.state.touched[field];
+
+			return hasError ? shouldShow : false;
+		};
+		/*END VALIDATION p1*/
+		
 		return <div className="contact_content">
 			<div style={defaultProps.flyLetterStyles.letters}>
 				{
@@ -330,7 +397,14 @@ class Contact extends Component {
 								<input onChange={this.onChange} placeholder="Name" type="text" name="name"/>
 							</div>
 							<div className="half">
-								<input onChange={this.onChange} placeholder="Email" type="email" name="email" required/>
+								<input
+									className={shouldMarkError('email') ? "error" : ""}
+									type="text"
+									placeholder="Email"
+									value={this.state.email}
+									onChange={this.handleEmailChange}
+									onBlur={this.handleBlur('email')}
+								/>
 							</div>
 						</div>
 						<div className="input_row">
@@ -339,8 +413,13 @@ class Contact extends Component {
 							<label className=""> </label>
 						</div>
 						<div className="input_row">
-							<textarea onChange={this.onChange} className="" placeholder="Message" name="msg" required/>
-							<label className=""> </label>
+							<textarea placeholder="Message" name="msg" required
+									  type="text"
+									  minLength="10"
+									  className={shouldMarkError('msg') ? "error" : ""}
+									  value={this.state.msg}
+									  onChange={this.handleMsgChange}
+									  onBlur={this.handleBlur('msg')}/>
 						</div>
 						<div className="input_submit">
 							<input id="submit" type="submit" className="" value="SEND"/>
