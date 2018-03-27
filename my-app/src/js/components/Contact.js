@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import {compose, withProps, withStateHandlers} from "recompose"
 import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps";
 import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
+import {VelocityComponent} from 'velocity-react';
 
 import '../../css/contact.css';
 import logo from '../../img/MyMarker.png';
 
 const defaultProps = {
+	/*GOOGLE MAPS PROPS*/
 	center: {lat: 49.8431, lng: 24.02607},
 	zoom: 14,
 	mapStyles: [
@@ -194,7 +196,7 @@ const defaultProps = {
 			]
 		}
 	],
-	divStyle: {
+	mapInfoBoxStyle: {
 		color: '#08fdd8',
 		backgroundColor: 'black',
 		margin: '14px',
@@ -207,8 +209,39 @@ const defaultProps = {
 		width: '250px',
 		transform: 'none',
 		borderRadius: '4px'
+	},
+
+	/*flyLetter ANIMATION PROPS*/
+	flyLetterStyles: {
+		input: {
+			height: 40,
+			backgroundColor: '#ddd',
+			width: 200,
+			border: 'none',
+			outline: 'none',
+			marginBottom: 20,
+			fontSize: 22,
+			padding: 8,
+		},
+		letters: {
+			position: 'absolute',
+			top: -200,
+			left: 20,
+			opacity: .1,
+			display: 'block',
+			height: 140,
+			width: '50%'
+		},
+		letter: {
+			opacity: 0,
+			marginTop: '100%',
+			fontSize: 22,
+			float: 'left',
+			height: 0
+		}
 	}
 };
+
 const StyledMapWithAnInfoBox = compose(
 	withProps({
 		googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBa7trDSsEedbuHDCqBFTLtJIAtSHYrg9s&v=3.exp&libraries=geometry,drawing,places",
@@ -243,7 +276,7 @@ const StyledMapWithAnInfoBox = compose(
 				onCloseClick={props.onToggleOpen}
 				options={{closeBoxURL: ``, enableEventPropagation: true}}
 			>
-				<div style={defaultProps.divStyle}>
+				<div style={defaultProps.mapInfoBoxStyle}>
 					Heeey!=) <br/> Kredens cafe is my second home! <br/>
 					Maybe I'm here at the moment! <br/>
 					So, you are welcome!:)
@@ -253,11 +286,38 @@ const StyledMapWithAnInfoBox = compose(
 	</GoogleMap>
 );
 
+/*flyLetter ANIMATION*/
+const VelocityLetter = ({letter}) => (
+	<VelocityComponent
+		runOnMount
+		animation={{opacity: 1, marginTop: 0}}
+		duration={500}
+	>
+		<p style={defaultProps.flyLetterStyles.letter}>{letter}</p>
+	</VelocityComponent>
+);
 
 class Contact extends Component {
+	/*flyLetter ANIMATION*/
+	state = {
+		letters: [],
+	};
+	onChange = (e) => {
+		const letters = e.target.value.split('');
+		const arr = [];
+		letters.forEach((l, i) => {
+			arr.push(<VelocityLetter letter={l} key={i}/>)
+		});
+		this.setState(() => ({letters: arr}))
+	};
 
 	render() {
 		return <div className="contact_content">
+			<div style={defaultProps.flyLetterStyles.letters}>
+				{
+					this.state.letters
+				}
+			</div>
 			<span className="tags">&nbsp;&nbsp;&nbsp;&lt;body&gt;</span>
 			<div className="contact_main">
 				<div className="left_side">
@@ -267,18 +327,19 @@ class Contact extends Component {
 					<form id="contact" autoComplete="off">
 						<div className="input_row">
 							<div className="half">
-								<input placeholder="Name" type="text" name="name"/>
+								<input onChange={this.onChange} placeholder="Name" type="text" name="name"/>
 							</div>
 							<div className="half">
-								<input placeholder="Email" type="email" name="email" required/>
+								<input onChange={this.onChange} placeholder="Email" type="email" name="email" required/>
 							</div>
 						</div>
 						<div className="input_row">
-							<input className="" placeholder="Subject" type="text" name="subject"/>
+							<input onChange={this.onChange} className="" placeholder="Subject" type="text"
+								   name="subject"/>
 							<label className=""> </label>
 						</div>
 						<div className="input_row">
-							<textarea className="" placeholder="Message" name="msg" required/>
+							<textarea onChange={this.onChange} className="" placeholder="Message" name="msg" required/>
 							<label className=""> </label>
 						</div>
 						<div className="input_submit">

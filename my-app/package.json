@@ -11,7 +11,8 @@
     "react-router": "latest",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
-    "recompose": "latest"
+    "recompose": "latest",
+    "velocity-react": "^1.3.3"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0"
