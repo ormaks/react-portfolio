@@ -64,6 +64,11 @@
 	color: #8d8d8d;
 	padding: 0 20px;
 	box-sizing: border-box;
+	font-family: monospace;
+}
+
+.contact_main form div.input_row div.half {
+	width: 50%;
 }
 
 .contact_main form div.input_row div.half > input {
@@ -129,8 +134,7 @@
 }
 
 body .infoBox {
-	width: 300px !important;
+	width: 250px !important;
 	transform: none !important;
-	left: -170px !important;
 	overflow: inherit !important;
 }

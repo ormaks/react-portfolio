@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {compose, withProps, withStateHandlers} from "recompose"
 import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps";
-import {InfoBox} from "react-google-maps/lib/components/addons/InfoBox";
+import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
 
 import '../../css/contact.css';
 import logo from '../../img/MyMarker.png';
@@ -199,11 +199,12 @@ const defaultProps = {
 		backgroundColor: 'black',
 		margin: '14px',
 		textAlign: 'center',
-		fontSize: '18px',
+		fontSize: '20px',
 		fontWeight: 'bold',
+		fontFamily: '"MyLogo", sans-serif',
 		opacity: .85,
 		padding: `12px`,
-		width: '300px',
+		width: '250px',
 		transform: 'none',
 		borderRadius: '4px'
 	}
@@ -243,7 +244,7 @@ const StyledMapWithAnInfoBox = compose(
 				options={{closeBoxURL: ``, enableEventPropagation: true}}
 			>
 				<div style={defaultProps.divStyle}>
-					Heeey!=) <br/> Kredense cafe is my second home!XD <br/>
+					Heeey!=) <br/> Kredens cafe is my second home! <br/>
 					Maybe I'm here at the moment! <br/>
 					So, you are welcome!:)
 				</div>

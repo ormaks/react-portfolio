@@ -18,7 +18,7 @@ class Header extends Component {
 					<Link to={prefix + "/"}> <i className="fas fa-home"/><span> home </span></Link>
 					<Link to={prefix + "/about"}> <i className="far fa-user"/><span> about </span></Link>
 					<Link to={prefix + "/skills"}> <i className="fas fa-cog"/><span> skills </span></Link>
-					<Link to={prefix + "/works"}> <i className="fas fa-eye"/><span> works </span></Link>
+					{/*<Link to={prefix + "/works"}> <i className="fas fa-eye"/><span> works </span></Link>*/}
 					<Link to={prefix + "/contact"}> <i className="far fa-envelope"/><span> contact </span></Link>
 				</div>
 				<div className="social_buttons">
