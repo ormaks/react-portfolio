@@ -227,16 +227,16 @@ let defaultProps = {
 		letters: {
 			position: 'absolute',
 			top: -200,
-			left: 20,
-			opacity: .1,
+			left: '7%',
+			opacity: .2,
 			display: 'block',
 			height: 140,
-			width: '50%'
+			width: '35%'
 		},
 		letter: {
 			opacity: 0,
 			marginTop: '100%',
-			fontSize: 22,
+			fontSize: 16,
 			float: 'left',
 			height: 0
 		}
@@ -310,6 +310,7 @@ function validate(email, msg) {
 		msg: msg.length <= 10,
 	};
 }
+
 /*END VALIDATION MAPS FUNC*/
 
 class Contact extends Component {
@@ -326,6 +327,7 @@ class Contact extends Component {
 			},
 		};
 	}
+
 	handleMsgChange = (evt) => {
 		this.setState({msg: evt.target.value});
 
@@ -339,7 +341,7 @@ class Contact extends Component {
 	};
 	handleEmailChange = (evt) => {
 		this.setState({email: evt.target.value});
-		
+
 		const letters = evt.target.value.split('');
 		const arr = [];
 		letters.forEach((l, i) => {
@@ -353,7 +355,7 @@ class Contact extends Component {
 		});
 	};
 	/*END VALIDATION p1*/
-	
+
 	/*flyLetter ANIMATION*/
 	state = {
 		letters: [],
@@ -366,6 +368,7 @@ class Contact extends Component {
 		});
 		this.setState(() => ({letters: arr}))
 	};
+
 	/*flyLetter ANIMATION*/
 
 	render() {
@@ -378,7 +381,7 @@ class Contact extends Component {
 			return hasError ? shouldShow : false;
 		};
 		/*END VALIDATION p1*/
-		
+
 		return <div className="contact_content">
 			<div style={defaultProps.flyLetterStyles.letters}>
 				{
@@ -399,11 +402,12 @@ class Contact extends Component {
 							<div className="half">
 								<input
 									className={shouldMarkError('email') ? "error" : ""}
-									type="text"
+									type="email"
 									placeholder="Email"
 									value={this.state.email}
 									onChange={this.handleEmailChange}
 									onBlur={this.handleBlur('email')}
+									required
 								/>
 							</div>
 						</div>
