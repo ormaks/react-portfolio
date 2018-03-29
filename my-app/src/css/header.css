@@ -13,34 +13,83 @@ header {
 }
 
 header > div.logo {
-	background: #070707;
 	display: block;
 	padding: 5px 0 0;
 }
 
-header > div.logo > img {
-	animation: App-logo-spin infinite 20s linear;
-	display: block;
+header > div.logo > .logo_img {
+	animation: App-logo-spin infinite 15s ease-in-out;
+	position: relative;
 	margin: 0 auto;
-	height: auto;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(360deg);
+
+}
+
+header > div.logo > .logo_img > .o_letter {
+	position: absolute;
+	font-size: 50px;
+	font-family: LogoImg, sans-serif;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-shadow: 0 0 10px #08fdd859;
+	color: #949292;
+}
+
+header > div.logo > .logo_img > .m_letter {
+	position: absolute;
+	font-size: 24px;
+	font-family: LogoImg, sans-serif;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 4px;
+	text-shadow: .3px .3px rgba(148, 146, 146, 0.2),
+	.6px .6px rgba(148, 146, 146, 0.2),
+	.9px .9px rgba(148, 146, 146, 0.2),
+	1.2px 1.2px rgba(148, 146, 146, 0.2),
+	1.5px 1.5px rgba(148, 146, 146, 0.2),
+	1.8px 1.8px rgba(148, 146, 146, 0.2);
+	color: #949292;
+	transform: rotate(15deg);
 }
 
 header > div.logo > span {
 	display: block;
 	margin: 0 auto 5px;
-	font-size: 15px;
+	font-size: 18px;
 	height: auto;
-	color: white;
+	color: #949292;
 	text-align: center;
+	font-family: myLogo, sans-serif;
+	text-shadow: 0 0 1px #08fdd88c;
 }
 
 @keyframes App-logo-spin {
-	from {
+	0% {
 		transform: rotate(0deg);
 	}
-	to {
+	2% {
+		transform: rotate(10deg);
+	}
+	6% {
+		transform: rotate(-35deg);
+	}
+	8% {
 		transform: rotate(360deg);
 	}
+	/*
+		15% {
+			transform: rotate(360deg);
+		}*/
 }
 
 header > div.main_buttons {
@@ -98,7 +147,14 @@ header > div.main_buttons {
 	text-decoration: none;
 }
 
-.fa-user:hover, .fa-home:hover, .fa-cog:hover, .fa-eye:hover, .fa-envelope:hover, .fa-telegram-plane:hover, .fa-facebook-f:hover, .fa-instagram:hover {
+.social_buttons a:hover > .fa-telegram-plane,
+.social_buttons a:hover > .fa-facebook-f,
+.social_buttons a:hover > .fa-instagram ,
+.active > .fa-user,
+.active > .fa-home,
+.active > .fa-cog,
+.active > .fa-eye,
+.active > .fa-envelope {
 	color: #08fdd8;
 }
 
@@ -118,7 +174,7 @@ header > div.social_buttons {
 	height: 30px;
 	font-size: 15px;
 	line-height: 16px;
-	color: #4d4d4e;
 	/*cursor: pointer;*/
 	transition: 0.5s;
+	color: #4d4d4e;
 }

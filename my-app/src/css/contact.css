@@ -61,7 +61,7 @@
 	background: #37393b;
 	height: 50px;
 	font-size: 16px;
-	color: #8d8d8d;
+	color: #fff;
 	padding: 0 20px;
 	box-sizing: border-box;
 	font-family: monospace;
@@ -97,7 +97,7 @@
 	background: #37393b;
 	height: 50px;
 	font-size: 16px;
-	color: #8d8d8d;
+	color: #fff;
 	padding: 20px;
 	box-sizing: border-box;
 	min-height: 150px;
@@ -121,6 +121,12 @@
 	float: right;
 	text-align: center;
 	margin-right: 10px;
+	transition: .3s linear;
+}
+
+.contact_main form > div > input#submit:hover {
+	background: #08fdd8;
+	color: #252627;
 }
 
 .contact_main > .right_side {

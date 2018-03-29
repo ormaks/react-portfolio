@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import '../../css/home.css';
-
+const prefix = "/react-portfolio";
 let Home = () => (
 	<div className="home_content">
 		<div className="left_side">
@@ -13,7 +13,7 @@ let Home = () => (
 				<span className="text_h1"> web developer. </span>
 				<span className="tag_h1">&lt;h1/&gt;</span> <br/>
 				<h2 className="h2_greating">Front End Developer / React / Angular</h2>
-				<Link to="/contact" className="contact_btn">Contact me</Link>
+				<Link to= {prefix +"/contact"} className="contact_btn">Contact me</Link>
 			</div>
 			<span className="tags">&nbsp;&nbsp;&nbsp;&lt;body/&gt; <br/> &lt;html/&gt;</span>
 		</div>

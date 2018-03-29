@@ -26,10 +26,10 @@
 }
 
 .about_main p {
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 18px;
 	color: #ffffff;
-	font-family: "Open Sans", sans-serif;
+	font-family: monospace, sans-serif;
 }
 
 .player {

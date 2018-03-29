@@ -22,7 +22,7 @@ let About = () => (
 			<p>Now I'm testing myself in freelance, but I'm open to any suggestions!</p>
 		</div>
 		<div className="player">
-			<iframe className="insta_iframe" width="320" height="440"
+			<iframe className="insta_iframe" width="320" height="440" title="instaPage"
 					src="https://www.instagram.com/p/BEl5FGdDP1R/embed" frameBorder="0"/>
 
 			<iframe className="player_iframe" width="100%" frameBorder="0" title="music"

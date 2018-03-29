@@ -72,4 +72,9 @@ body {
 	font-family: 'MyLogo';
 	src: url('../fonts/DancingScript-Bold.ttf');
 }
+@font-face {
+	font-weight: normal;
+	font-family: 'LogoImg';
+	src: url('../fonts/tempsitc.ttf');
+}
 

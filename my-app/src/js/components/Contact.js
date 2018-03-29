@@ -228,21 +228,21 @@ let defaultProps = {
 			position: 'absolute',
 			top: -200,
 			left: '7%',
-			opacity: .2,
+			opacity: 1,
 			display: 'block',
 			height: 140,
-			width: '35%'
+			width: '32%',
+			color: 'white',
 		},
 		letter: {
 			opacity: 0,
-			marginTop: '100%',
+			marginTop: '90%',
 			fontSize: 16,
+			fontFamily: 'monospace',
 			float: 'left',
 			height: 0
 		}
 	},
-
-
 };
 
 /*GOOGLE MAPS FUNC*/
@@ -282,7 +282,7 @@ const StyledMapWithAnInfoBox = compose(
 			>
 				<div style={defaultProps.mapInfoBoxStyle}>
 					Heeey!=) <br/> Kredens cafe is my second home! <br/>
-					Maybe I'm here at the moment! <br/>
+					Maybe I'm here at this moment! <br/>
 					So, you are welcome!:)
 				</div>
 			</InfoBox>}
@@ -296,7 +296,7 @@ const VelocityLetter = ({letter}) => (
 	<VelocityComponent
 		runOnMount
 		animation={{opacity: 1, marginTop: 0}}
-		duration={500}
+		duration={1000}
 	>
 		<p style={defaultProps.flyLetterStyles.letter}>{letter}</p>
 	</VelocityComponent>

@@ -28,7 +28,6 @@ const skills = [
 	"Git",
 	"Bootstrap",
 	"Flexbox",
-	"TiemViewer",
 	"XML",
 	"SVG",
 ];
@@ -36,7 +35,7 @@ const skills = [
 class Sphere extends Component {
 	static defaultProps = {
 		textColour: '#08fdd8',
-		shape: 'sphere',
+		shape: 'sphere'
 	};
 	static propTypes = {
 		textColour: PropTypes.string,

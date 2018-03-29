@@ -1,10 +1,8 @@
 import React from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
-import {About, Contact, Header, Home, Skills,} from '../js/components';
-
+import {About, Contact, Header, Home, Skills} from '../js/components';
 
 const prefix = "/react-portfolio";
-
 let Layout = () => (
 	<div>
 		<Header/>

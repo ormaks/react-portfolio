@@ -30,10 +30,10 @@
 }
 
 .skills_main > .left_side p {
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 18px;
 	color: #ffffff;
-	font-family: "Open Sans", sans-serif;
+	font-family: monospace, sans-serif;
 }
 
 .skills_main > .right_side {
@@ -46,4 +46,5 @@
 /*noinspection CssUnusedSymbol*/
 .skills_main > .tags_cloud div.sphere-tags {
 	display: none;
+	font-family: monospace, sans-serif;
 }
