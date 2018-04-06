@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-import '../../css/skills.css';
+import '../../css/skills.scss';
 import '../vendor/tagcanvas.min'
 
 // FIXME

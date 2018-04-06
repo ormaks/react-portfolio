@@ -53,28 +53,28 @@ body {
 
 @font-face {
 	font-family: 'MyTags';
-	src: url('../fonts/LaBelleAurore.ttf');
+	src: url('../fonts/LaBelleAurore.ttf') format("truetype");
 }
 
 @font-face {
 	font-family: 'MyHeader';
-	src: url('../fonts/Millunium-BOLD.ttf');
+	src: url('../fonts/Millunium-BOLD.ttf') format("truetype");
 }
 
 @font-face {
 	font-weight: normal;
 	font-family: 'MyLogo';
-	src: url('../fonts/DancingScript-Regular.ttf');
+	src: url('../fonts/DancingScript-Regular.ttf') format("truetype");
 }
 
 @font-face {
 	font-weight: bold;
 	font-family: 'MyLogo';
-	src: url('../fonts/DancingScript-Bold.ttf');
+	src: url('../fonts/DancingScript-Bold.ttf') format("truetype");
 }
 @font-face {
 	font-weight: normal;
 	font-family: 'LogoImg';
-	src: url('../fonts/tempsitc.ttf');
+	src: url('../fonts/tempsitc.ttf') format("truetype");
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/preloader.css';
+import '../../css/preloader.scss';
 
 let PreloaderElement = () => (
 	<div className="preloader_content">

@@ -5,8 +5,9 @@ import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
 import {VelocityComponent} from 'velocity-react';
 import validator from 'validator'
 
-import '../../css/contact.css';
-import logo from '../../img/MyMarker.png';
+import '../../css/contact.scss';
+// import logo from './build/img/MyMarker.png';
+const logo = 'build/img/MyMarker.png';
 
 let defaultProps = {
 	/*GOOGLE MAPS PROPS*/
@@ -326,9 +327,9 @@ class Contact extends Component {
 				msg: false,
 			},
 		};
-	}
+	};
 
-	handleMsgChange = (evt) => {
+	handleMsgChange = (evt) =>{
 		this.setState({msg: evt.target.value});
 
 
@@ -339,6 +340,7 @@ class Contact extends Component {
 		});
 		this.setState(() => ({letters: arr}))
 	};
+
 	handleEmailChange = (evt) => {
 		this.setState({email: evt.target.value});
 

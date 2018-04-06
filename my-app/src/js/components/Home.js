@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import '../../css/home.css';
+import '../../css/home.scss';
 const prefix = "/react-portfolio";
 let Home = () => (
 	<div className="home_content">

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import '../../css/header.css';
+import '../../css/header.scss';
 
 const prefix = "/react-portfolio";
 
