@@ -12,15 +12,13 @@ let isProduction = (process.env.NODE_ENV === 'production');
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	entry: path.join(__dirname, './src/index.js'),
-	/*path: path.resolve(__dirname, "build"),
-	filename: "js/bundle.js"*/
 	output: {
 		filename: 'js/bundle.js',
-		path: path.resolve(__dirname,'public/build'),
+		path: path.resolve(__dirname, 'static/build'),
 		publicPath: '../' // styles 'url()' function fix
 	},
 	devServer: {
-		contentBase: "./public"
+		contentBase: "./static"
 	},
 	devtool: (isProduction) ? '' : 'inline-source-map',
 	module: {
@@ -49,7 +47,7 @@ module.exports = {
 					],
 					fallback: 'style-loader',
 				})
-			},/*
+			}, /*
 			{
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
@@ -89,8 +87,8 @@ module.exports = {
 	plugins: [
 		new ExtractTextPlugin({
 				filename: 'css/index.css',
-			disable: false,
-			allChunks: true
+				disable: false,
+				allChunks: true
 			}
 		),
 		// new CleanWebackPlugin(['build']),
