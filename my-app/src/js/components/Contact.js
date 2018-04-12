@@ -7,7 +7,7 @@ import validator from 'validator'
 
 import '../../css/contact.scss';
 // import logo from './build/img/MyMarker.png';
-const logo = 'build/img/MyMarker.png';
+const logo = '../img/MyMarker.png';
 
 let defaultProps = {
 	/*GOOGLE MAPS PROPS*/

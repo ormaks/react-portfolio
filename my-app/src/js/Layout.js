@@ -1,8 +1,9 @@
 import React from 'react';
-import {Redirect, Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router";
+// import {Redirect, Route, Switch} from "react-router-dom";
 import {About, Contact, Header, Home, Skills} from '../js/components';
 
-const prefix = "/react-portfolio";
+const prefix = "";
 //todo browserHistory
 let Layout = () => (
 	<div>

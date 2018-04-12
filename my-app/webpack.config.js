@@ -6,7 +6,7 @@ const CleanWebackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageinPlugin = require('imagemin-webpack-plugin').default;
-
+//"start": "webpack-dev-server --hot --inline --open",
 let isProduction = (process.env.NODE_ENV === 'production');
 
 module.exports = {
@@ -14,11 +14,13 @@ module.exports = {
 	entry: path.join(__dirname, './src/index.js'),
 	output: {
 		filename: 'js/bundle.js',
-		path: path.resolve(__dirname, 'static/build'),
-		publicPath: '../' // styles 'url()' function fix
+		path: path.resolve(__dirname, 'static'),
+		// publicPath: '../' // styles 'url()' function fix
 	},
 	devServer: {
-		contentBase: "./static"
+		contentBase: "./static",
+		headers: { "Access-Control-Allow-Origin": "*" },
+		historyApiFallback: true
 	},
 	devtool: (isProduction) ? '' : 'inline-source-map',
 	module: {
@@ -47,27 +49,29 @@ module.exports = {
 					],
 					fallback: 'style-loader',
 				})
-			}, /*
+			},
 			{
-				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: 'css-loader'
-				})
-			},*/
-			{
-				test: /\.(png|gif|cur|jpe?g)$/i,
+				test: /\.(png|gif|jpe?g)$/i,
 				loader: [
 					{
 						loader: 'file-loader',
 						options: {
-							name: "[path][name].[ext]",
+							name: "./img/[name].[ext]",
 						},
 					},
 					'img-loader',
 				]
 			},
 			{
+				test: /\.(ttf|cur)$/,
+				loader: "file-loader",
+				options: {
+					limit: 50000,
+					publicPath: "../",
+					name: "[path][name].[ext]",
+				},
+			},
+			/*{
 				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				use: [
 					{
@@ -77,7 +81,7 @@ module.exports = {
 						}
 					}
 				]
-			},
+			},*/
 			{
 				test: /\.svg$/,
 				loader: 'svg-url-loader',
@@ -91,12 +95,16 @@ module.exports = {
 				allChunks: true
 			}
 		),
-		// new CleanWebackPlugin(['build']),
+		// new CleanWebackPlugin(['static/build']),
 		new CopyWebpackPlugin(
 			[
 				{
 					from: './img',
 					to: 'img'
+				},
+				{
+					from: './fonts',
+					to: 'fonts'
 				}
 			],
 			{

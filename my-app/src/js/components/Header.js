@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../css/header.scss';
 
-const prefix = "/react-portfolio";
+// const prefix = "/react-portfolio";
 
 const MyLink = ({to, className = "", children = []}) => {
 	return (
-		<Link to={prefix + to} className={(window.location.pathname === prefix + to ? "active" : "")}
-		> <i className={className}/><span>{children}</span></Link>
+		<Link to={ to} className={(window.location.pathname === to ? "active" : "")}>
+			<i className={className}/>
+			<span>{children}</span>
+		</Link>
 	)
 };
 
