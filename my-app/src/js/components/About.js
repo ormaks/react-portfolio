@@ -24,7 +24,6 @@ let About = () => (
 		<div className="player">
 			<iframe className="insta_iframe" width="320" height="440" title="instaPage"
 					src="https://www.instagram.com/p/BEl5FGdDP1R/embed" frameBorder="0"/>
-
 			{/*<iframe className="player_iframe" width="100%" frameBorder="0" title="music"
 					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/405996411&
                             color=%23000000&&hide_related=false&show_comments=true&show_user=true&

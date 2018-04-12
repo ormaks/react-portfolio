@@ -1,157 +1,166 @@
 .contact_content {
-	height: 90%;
-	top: 5%;
-	left: 55px;
-	min-height: 566px;
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	justify-content: space-between;
-	width: calc(100% - 55px);
-}
+  height: 90%;
+  top: 5%;
+  left: 55px;
+  min-height: 566px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-between;
+  width: calc(100% - 55px);
 
-.contact_content .text_h1 {
-	color: #08fdd8;
-}
+  .text_h1 {
+    color: #08fdd8;
+  }
 
-.contact_content > .contact_main {
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
+  > .contact_main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.contact_main > .left_side {
-	margin-left: 6%;
-	width: 35%;
-	vertical-align: middle;
-	display: table-cell;
-	max-height: 90%;
-}
+    > .left_side {
+      margin-left: 6%;
+      width: 35%;
+      vertical-align: middle;
+      display: table-cell;
+      max-height: 90%;
 
-.contact_main form {
-	width: 100%;
-	opacity: 0.7;
-}
+      form {
+        width: 100%;
+        opacity: 0.7;
 
-.contact_main form div.input_row:not(:first-child) {
-	padding: 0;
-	margin: 0 0 10px;
-	/*opacity: 0;*/
-	overflow: hidden;
-	display: block;
-	clear: both;
-	position: relative;
-}
+        div.input_row:not(:first-child) {
+          padding: 0;
+          margin: 0 0 10px;
+          overflow: hidden;
+          display: block;
+          clear: both;
+          position: relative;
+        }
 
-.contact_main form div.input_row:first-child {
-	display: flex;
-	justify-content: space-between;
-	padding: 0 0 10px;
-	/*opacity: 0;*/
-	overflow: hidden;
-	clear: both;
-	position: relative;
+        div.input_row:first-child {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0 10px;
+          /*opacity: 0;*/
+          overflow: hidden;
+          clear: both;
+          position: relative;
 
-}
+        }
 
-.contact_main form > div.input_row input {
-	width: 100%;
-	border: 0;
-	background: #37393b;
-	height: 50px;
-	font-size: 16px;
-	color: #fff;
-	padding: 0 20px;
-	box-sizing: border-box;
-	font-family: monospace;
-	transition: .3s all linear;
-	border-bottom: 2px solid #08fdd8;
-}
+        > div.input_row input {
+          width: 100%;
+          border: 0;
+          background: #37393b;
+          height: 50px;
+          font-size: 16px;
+          color: #fff;
+          padding: 0 20px;
+          box-sizing: border-box;
+          font-family: monospace;
+          transition: .3s all linear;
+          border-bottom: 2px solid #08fdd8;
 
-.contact_main form div.input_row div.half {
-	width: 50%;
-}
+          &:hover {
+            background: rgba(8, 253, 216, 0.13);
+            box-shadow: inset 0 0 20px #08fdd96e;
+          }
+          &:focus {
+            background: rgba(8, 253, 216, 0.04);
+            box-shadow: inset 0 0 10px #08fdd96e;
+          }
+        }
+        div.input_row div.half {
+          width: 50%;
+        }
 
-.contact_main form div.input_row div.half > input {
-	width: 98%;
-	border: 0;
-	background: #37393b;
-	height: 50px;
-	font-size: 16px;
-	color: #8d8d8d;
-	padding: 0 20px;
-	box-sizing: border-box;
-	transition: .3s all linear;
-	border-bottom: 2px solid #08fdd8;
-}
+        div.input_row div.half > input {
+          width: 98%;
+        }
 
-.contact_main form div.input_row div.half:nth-child(2) > input {
-	width: 98%;
-	margin-left: 4%;
-}
+        div.input_row div.half:nth-child(2) > input {
+          width: 98%;
+          margin-left: 2%;
+        }
 
-.contact_main form > div > textarea {
-	width: 100%;
-	border: 0;
-	background: #37393b;
-	height: 50px;
-	font-size: 16px;
-	color: #fff;
-	padding: 20px;
-	box-sizing: border-box;
-	min-height: 150px;
-	max-height: 250px;
-	resize: vertical;
-	border-bottom: 2px solid #08fdd8;
-	transition: .3s border linear;
-}
+        > div > textarea {
+          width: 100%;
+          border: 0;
+          background: #37393b;
+          height: 50px;
+          font-size: 16px;
+          color: #fff;
+          padding: 20px;
+          box-sizing: border-box;
+          min-height: 150px;
+          max-height: 250px;
+          resize: vertical;
+          border-bottom: 2px solid #08fdd8;
+          transition: .3s all linear;
+          &:hover{
+            background: rgba(8, 253, 216, 0.13);
+            box-shadow: inset 0 0 20px #08fdd96e;
+          }
+          &:focus {
+            background: rgba(8, 253, 216, 0.04);
+            box-shadow: inset 0 0 10px #08fdd96e;
+          }
+        }
 
-.contact_main form > div > input#submit {
-	color: #08fdd8;
-	font-size: 11px;
-	letter-spacing: 3px;
-	font-family: "Open Sans", sans-serif;
-	text-decoration: none;
-	padding: 8px 10px;
-	border: 1px solid #08fdd8;
-	border-radius: 4px;
-	background: transparent;
-	text-transform: uppercase;
-	float: right;
-	text-align: center;
-	margin-right: 10px;
-	transition: .3s linear;
-}
+        > div > input#submit {
+          color: #08fdd8;
+          font-size: 11px;
+          letter-spacing: 3px;
+          font-family: "Open Sans", sans-serif;
+          text-decoration: none;
+          padding: 8px 10px;
+          border: 1px solid #08fdd8;
+          border-radius: 4px;
+          background: transparent;
+          text-transform: uppercase;
+          float: right;
+          text-align: center;
+          margin-right: 10px;
+          transition: .3s linear;
+          &:hover {
+            background: #08fdd8;
+            color: #252627;
+          }
+          &:focus {
+            background: rgba(8, 253, 216, 0.04);
+            box-shadow: inset 0 0 10px #08fdd96e;
+          }
+        }
 
-.contact_main form > div > input#submit:hover {
-	background: #08fdd8;
-	color: #252627;
-}
+      }
+    }
+    > .right_side {
+      width: 65%;
+      height: 114%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: -5%;
+      top: -6%;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
 
-.contact_main > .right_side {
-	width: 65%;
-	height: 114%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	right: -5%;
-	top: -6%;
-	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
-}
-
-.contact_main > .right_side > div#map {
-	height: 400px;
-	width: 100%;
+      > div#map {
+        height: 400px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 body .infoBox {
-	width: 250px !important;
-	transform: none !important;
-	overflow: inherit !important;
+  width: 250px !important;
+  transform: none !important;
+  overflow: inherit !important;
 }
 
 .error {
-	border-bottom: 2px solid red !important;
+  border-bottom: 2px solid red !important;
 }
