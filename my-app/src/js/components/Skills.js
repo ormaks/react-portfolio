@@ -87,7 +87,7 @@ class Sphere extends Component {
 }
 
 let Skills = () => (
-	<div className="skills_content transition-item">
+	<div className="skills_content">
 		<span className="tags">&nbsp;&nbsp;&nbsp;&lt;body&gt;</span>
 		<div className="skills_main">
 			<div className="left_side">

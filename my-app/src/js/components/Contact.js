@@ -7,7 +7,7 @@ import validator from 'validator'
 
 import '../../css/contact.scss';
 // import logo from './build/img/MyMarker.png';
-const logo = '../img/MyMarker.png';
+const logo = '../img/MyMarkerNew.png';
 
 let defaultProps = {
 	/*GOOGLE MAPS PROPS*/
@@ -414,9 +414,8 @@ class Contact extends Component {
 							</div>
 						</div>
 						<div className="input_row">
-							<input onChange={this.onChange} className="" placeholder="Subject" type="text"
+							<input onChange={this.onChange} placeholder="Subject" type="text"
 								   name="subject"/>
-							<label className=""> </label>
 						</div>
 						<div className="input_row">
 							<textarea placeholder="Message" name="msg" required

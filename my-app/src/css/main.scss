@@ -78,3 +78,31 @@ body {
 	src: url('../fonts/tempsitc.ttf') format("truetype");
 }
 
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	.tags {
+		margin-left: 5px;
+	}
+	.text_h1 {
+		font-size: 35px;
+		line-height: 30px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	body{
+	overflow: inherit;
+	}
+	.tags {
+		margin-left: 10px;
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+
+}
+
+@media only screen and (min-width: 1824px) {
+
+}
