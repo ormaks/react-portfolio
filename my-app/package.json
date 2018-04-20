@@ -12,7 +12,7 @@
     "watch": "webpack -d --watch",
 
     "start": "npm-run-all --parallel webpack:build server",
-    "webpack:build": "webpack --watch",
+    "webpack:build": "webpack -p --watch",
     "server": "node server.js",
 
     "production": "NODE_ENV=production webpack",

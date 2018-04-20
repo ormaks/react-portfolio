@@ -31,6 +31,13 @@
         line-height: 18px;
         color: #ffffff;
         font-family: monospace, sans-serif;
+
+        a {
+          color: #08fdd8;
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
     }
 
@@ -47,4 +54,100 @@
       font-family: monospace, sans-serif;
     }
   }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .skills_content {
+    left: 0;
+    top: 70px;
+    min-height: 810px;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    > .skills_main {
+      height: 100%;
+      top: 70px;
+      width: 100%;
+      flex-direction: column;
+      > .left_side {
+        width: 90%;
+        margin-left: 10%;
+        p {
+          font-size: 16px;
+          letter-spacing: 1px;
+          line-height: 19px;
+        }
+      }
+
+      > .right_side {
+        width: 90%;
+        overflow: auto;
+        margin: 0;
+        min-height: 115px;
+        canvas {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      > .tags_cloud div.sphere-tags {
+        display: none;
+        font-family: monospace, sans-serif;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 481px/*768px*/) and (max-width: 1024px) {
+  .skills_content {
+    left: 0;
+    top: 70px;
+    min-height: 810px;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    > .skills_main {
+      height: 100%;
+      top: 70px;
+      width: 100%;
+      flex-direction: column;
+      > .left_side {
+        width: 90%;
+        margin-left: 10%;
+        p {
+          font-size: 16px;
+          letter-spacing: 1px;
+          line-height: 19px;
+        }
+      }
+
+      > .right_side {
+        width: 100%;
+        overflow: auto;
+        margin: 0;
+        min-height: 115px;
+        .tags_cloud {
+          width: 95%;
+        }
+        canvas {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      > .tags_cloud div.sphere-tags {
+        display: none;
+        font-family: monospace, sans-serif;
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+
+}
+
+@media only screen and (min-width: 1824px) {
+
 }

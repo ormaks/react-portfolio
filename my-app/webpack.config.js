@@ -9,6 +9,13 @@ const ImageinPlugin = require('imagemin-webpack-plugin').default;
 //"start": "webpack-dev-server --hot --inline --open",
 let isProduction = (process.env.NODE_ENV === 'production');
 
+let pathsToClean = [
+		'static/js',
+		'static/css',
+		'static/fonts',
+		'static/img',
+	];
+
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	entry: path.join(__dirname, './src/index.js'),
@@ -95,7 +102,7 @@ module.exports = {
 				allChunks: true
 			}
 		),
-		// new CleanWebackPlugin(['static/build']),
+		new CleanWebackPlugin(pathsToClean),
 		new CopyWebpackPlugin(
 			[
 				{

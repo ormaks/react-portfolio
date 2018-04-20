@@ -55,7 +55,9 @@
     position: absolute;
     right: -123px;
     img {
-      display: none;
+      position: absolute;
+      right: 145px;
+      top: 30px;
     }
     svg {
       &.logo {
@@ -288,6 +290,7 @@
   .home_content {
     width: 100%;
     margin: 0;
+
     .left_side {
       height: auto;
       top: 75px;
@@ -319,6 +322,7 @@
         display: block;
         width: 80%;
         opacity: 0.02;
+        position: initial;
       }
       svg.logo ,
       svg.logo_mirror {
@@ -328,14 +332,12 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 481px/*768px*/) and (max-width: 1024px) {
   .home_content {
     width: 100%;
     height: 100vh;
-    min-height: 810px;
+    min-height: 768px;
     margin: 0;
-    overflow: scroll;
-    overflow-y: auto;
     position: relative;
     .left_side {
       height: auto;
@@ -357,6 +359,7 @@
       align-items: center;
       img {
         display: block;
+        position: initial;
       }
       svg.logo {
         transform: rotate(0deg);

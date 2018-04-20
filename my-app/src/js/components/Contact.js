@@ -12,7 +12,7 @@ const logo = '../img/MyMarkerNew.png';
 let defaultProps = {
 	/*GOOGLE MAPS PROPS*/
 	center: {lat: 49.8431, lng: 24.02607},
-	zoom: 14,
+	zoom: 13,
 	mapStyles: [
 		{
 			"featureType": "all",
@@ -251,7 +251,7 @@ const StyledMapWithAnInfoBox = compose(
 	withProps({
 		googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBa7trDSsEedbuHDCqBFTLtJIAtSHYrg9s&v=3.exp&libraries=geometry,drawing,places",
 		loadingElement: <div style={{height: `100%`, width: '100%'}}/>,
-		containerElement: <div style={{height: `100%`, width: '100%'}}/>,
+		containerElement: <div style={{ width: '100%'}}/>,
 		mapElement: <div style={{height: `100%`, width: '100%'}}/>
 	}),
 	withStateHandlers(() => ({

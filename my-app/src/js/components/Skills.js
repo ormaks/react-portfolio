@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import '../../css/skills.scss';
 import '../vendor/tagcanvas.min'
-
-// FIXME
-// setTimeout(console.clear, 2000);
 
 const skills = [
 	"HTML5",
@@ -95,15 +93,12 @@ let Skills = () => (
 				<span className="text_h1"> Skills & </span> <br/>
 				<span className="text_h1"> Experience </span> <br/>
 				<span className="tag_h1">&lt;h1/&gt;</span> <br/>
-				<p>Hello, I am 20-year-old student from Ukraine.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam architecto, atque
-					debitis
-					delectus iusto laudantium molestias nobis, officiis quas, rerum similique ut
-					voluptatum. </p>
-				<p>Atque harum impedit in nihil odit perferendis possimus quae quia rerum unde. Aliquid, culpa
-					illum
-					minus porro quo saepe sed voluptate. A beatae, soluta.</p>
-				<p>A consectetur debitis delectus fugiat in ipsam minus nesciunt similique suscipit totam?</p>
+				<p>Main area of my expertise is front end development and everything related with this side of web.
+					HTML, CSS, JS(ES5,ES6), building Web Apps, ReactJS, building features, animations and just coding
+					layouts.</p>
+				<p>I have also some experience with Angular, Django, Node.js.</p>
+				<p>Would like to know more?<br/>
+					Please check my <Link to="https://www.linkedin.com/in/ormaks/" target='_blank'>LinkedIn</Link> profile or just <Link to={"/contact"} >contact</Link> me.</p>
 			</div>
 			<div className="right_side">
 				<Sphere id={'mySkills'} width={550} height={500} items={skills}/>

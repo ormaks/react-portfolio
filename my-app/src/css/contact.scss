@@ -43,7 +43,6 @@
           display: flex;
           justify-content: space-between;
           padding: 0 0 10px;
-          /*opacity: 0;*/
           overflow: hidden;
           clear: both;
           position: relative;
@@ -99,7 +98,7 @@
           resize: vertical;
           border-bottom: 2px solid #08fdd8;
           transition: .3s all linear;
-          &:hover{
+          &:hover {
             background: rgba(8, 253, 216, 0.13);
             box-shadow: inset 0 0 20px #08fdd96e;
           }
@@ -146,7 +145,9 @@
       right: -5%;
       top: -6%;
       clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
-
+      > div {
+        height: 100%;
+      }
       > div#map {
         height: 400px;
         width: 100%;
@@ -155,12 +156,116 @@
   }
 }
 
-body .infoBox {
-  width: 250px !important;
-  transform: none !important;
-  overflow: inherit !important;
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact_content {
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 60px;
+    left: 0;
+
+    > .contact_main {
+      flex-direction: column;
+
+      > .left_side {
+        margin: 0 0 70px 6%;
+        width: 90%;
+        form {
+          width: 102%;
+          margin-left: -4%;
+
+          div.input_row {
+
+            &:first-child {
+              flex-direction: column;
+            }
+            div.half {
+              width: 100%;
+              input {
+                width: 100%;
+              }
+              &:first-child {
+                padding: 0 0 10px;
+              }
+              &:nth-child(2) {
+                > input {
+                  width: 100%;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+
+        }
+      }
+      > .right_side {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        overflow: auto;
+        margin: 0;
+        min-height: 300px;
+        position: inherit;
+        > div {
+          height: 65%;
+          width: 100%;
+          position: absolute;
+          top: 37%;
+          left: 0;
+        }
+      }
+    }
+  }
 }
 
-.error {
-  border-bottom: 2px solid red !important;
+@media only screen and (min-width: 481px/*768px*/) and (max-width: 1024px) {
+  .contact_content {
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 60px;
+    left: 0;
+
+    > .contact_main {
+      flex-direction: column;
+
+      > .left_side {
+        margin: 0 0 70px 6%;
+        width: 90%;
+        form {
+          width: 102%;
+          margin-left: -4%;
+          > div > input#submit {
+            padding: 10px 45px;
+          }
+        }
+      }
+
+      > .right_side {
+        width: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        overflow: auto;
+        margin: 0;
+        min-height: 300px;
+        position: inherit;
+        > div {
+          height: 65%;
+          width: 100%;
+          position: absolute;
+          top: 37%;
+          left: 0;
+        }
+      }
+    }
+
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+
+}
+
+@media only screen and (min-width: 1824px) {
+
 }
