@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../css/header.scss';
 
-const prefix = "";
+const prefix = "/react-portfolio";
+// const prefix = "";
 
 const MyLink = ({to, className = "", children = []}) => {
 	return (

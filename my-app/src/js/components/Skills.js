@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import '../../css/skills.scss';
 import '../vendor/tagcanvas.min'
 
+const prefix = "/react-portfolio";
+// const prefix = "";
+
 const skills = [
 	"HTML5",
 	"CSS3",
@@ -25,9 +28,9 @@ const skills = [
 	"JSON",
 	"Git",
 	"Bootstrap",
-	"Flexbox",
 	"XML",
 	"SVG",
+	"Node.js"
 ];
 
 class Sphere extends Component {
@@ -98,7 +101,10 @@ let Skills = () => (
 					layouts.</p>
 				<p>I have also some experience with Angular, Django, Node.js.</p>
 				<p>Would like to know more?<br/>
-					Please check my <Link to="https://www.linkedin.com/in/ormaks/" target='_blank'>LinkedIn</Link> profile or just <Link to={"/contact"} >contact</Link> me.</p>
+					Please check my <Link to="https://www.linkedin.com/in/ormaks/"
+										  target='_blank'>LinkedIn</Link> profile or just
+					<Link to={prefix + "/contact"}>contact</Link> me.
+				</p>
 			</div>
 			<div className="right_side">
 				<Sphere id={'mySkills'} width={550} height={500} items={skills}/>

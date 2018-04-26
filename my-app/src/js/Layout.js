@@ -3,11 +3,15 @@ import {Redirect, Route, Switch} from "react-router";
 // import {Redirect, Route, Switch} from "react-router-dom";
 import {About, Contact, Header, Home, Skills} from '../js/components';
 
-const prefix = "";
+const prefix = "/react-portfolio";
+// const prefix = "";
+
 //todo browserHistory
 let Layout = () => (
 	<div>
 		<Header/>
+
+		<Redirect from={""} to={prefix + ""}/>
 		<Route path={prefix}>
 			<Switch>
 				<Redirect from={prefix + "/index.html"} to={prefix + "/"}/>

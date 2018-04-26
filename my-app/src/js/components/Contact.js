@@ -396,6 +396,7 @@ class Contact extends Component {
 					<span className="tag_h1">&lt;h1&gt;</span> <br/>
 					<span className="text_h1"> Contact </span> <br/>
 					<span className="tag_h1">&lt;h1/&gt;</span> <br/>
+					<p style={{color:"red"}}>This form is UI Demo</p>
 					<form id="contact" autoComplete="off">
 						<div className="input_row">
 							<div className="half">
