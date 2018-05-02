@@ -21,7 +21,7 @@ let Home = () => (
 			<span className="tags">&nbsp;&nbsp;&nbsp;&lt;/body&gt; <br/> &lt;/html&gt;</span>
 		</div>
 		<div className="right_side">
-			<img src="../../img/Wolf2.png" alt=""/>
+			<img src="../img/Wolf2.png" alt=""/>
 			<svg className="logo" version="1.1" xmlns="http://www.w3.org/2000/svg">
 				<text className="path" xmlSpace="preserve" textAnchor="middle"
 					  y="195" x="370">Ormaks
