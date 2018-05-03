@@ -10,7 +10,6 @@ const prefix = "/react-portfolio";
 let Layout = () => (
 	<div>
 		<Header/>
-
 		<Redirect from={""} to={prefix + ""}/>
 		<Route path={prefix}>
 			<Switch>
