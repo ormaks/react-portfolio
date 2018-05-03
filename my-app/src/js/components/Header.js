@@ -32,7 +32,7 @@ class Header extends Component {
 			<header className={this.state.isToggleOn ? "is-open " : ()=>setTimeout((""), 4000)}>
 				<div className={(this.state.isToggleOn ? "is-open " : " ") + "logo"}>
 					<div className="logo_img">
-						<img src="../../img/Wolf2.png" alt=""/>
+						<img src="../img/Wolf2.png" alt=""/>
 						{/*<span className="o_letter">O</span>*/}
 						{/*<span className="m_letter">m</span>*/}
 					</div>
