@@ -22,7 +22,6 @@ module.exports = {
 	output: {
 		filename: 'js/bundle.js',
 		path: path.resolve(__dirname, 'static'),
-		// publicPath: '../' // styles 'url()' function fix
 	},
 	devServer: {
 		contentBase: "./static",
@@ -70,7 +69,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(ttf|cur)$/,
+				test: /\.(woff|woff2|eot|otf|ttf|cur)$/,
 				loader: "file-loader",
 				options: {
 					limit: 50000,
@@ -78,17 +77,6 @@ module.exports = {
 					name: "[path][name].[ext]",
 				},
 			},
-			/*{
-				test: /\.(woff|woff2|eot|ttf|otf)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: '[path][name].[ext]',
-						}
-					}
-				]
-			},*/
 			{
 				test: /\.svg$/,
 				loader: 'svg-url-loader',
