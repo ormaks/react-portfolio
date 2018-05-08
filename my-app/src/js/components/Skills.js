@@ -3,10 +3,8 @@ import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import '../../css/skills.scss';
-import '../vendor/tagcanvas.min'
-
-const prefix = "/react-portfolio";
-// const prefix = "";
+import '../vendor/tagcanvas.min';
+import prefix from "Config";
 
 const skills = [
 	"HTML5",
