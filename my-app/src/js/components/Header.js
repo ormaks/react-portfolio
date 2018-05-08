@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../css/header.scss';
+import '../vendor/FontAwesome';
 
 const prefix = "/react-portfolio";
 // const prefix = "";
