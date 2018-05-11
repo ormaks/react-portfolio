@@ -100,8 +100,8 @@ let Skills = () => (
 				<p>I have also some experience with Angular, Django, Node.js.</p>
 				<p>Would like to know more?<br/>
 					Please check my <Link to="https://www.linkedin.com/in/ormaks/"
-										  target='_blank'>LinkedIn</Link> profile or just 
-					<Link to={prefix + "/contact"}>contact</Link> me.
+										  target='_blank'>LinkedIn</Link> profile or just <Link
+                        to={prefix + "/contact"}>contact</Link> me.
 				</p>
 			</div>
 			<div className="right_side">
