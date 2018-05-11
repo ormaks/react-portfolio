@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import '../../css/skills.scss';
 import '../vendor/tagcanvas.min';
-import prefix from "Config";
+import prefix from "./Config";
 
 const skills = [
 	"HTML5",

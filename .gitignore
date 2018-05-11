@@ -9,6 +9,10 @@ coverage
 
 # production
 build/
+my-app/static/css
+my-app/static/js
+my-app/static/img
+my-app/static/fonts
 
 # misc
 .DS_Store

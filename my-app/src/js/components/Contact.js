@@ -6,7 +6,7 @@ import {VelocityComponent} from 'velocity-react';
 import validator from 'validator'
 
 import '../../css/contact.scss';
-import prefix from "Config";
+import prefix from "./Config";
 
 
 const logo = '..' + prefix + '/img/MyMarkerNew.png';

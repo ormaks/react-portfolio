@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import '../../css/home.scss';
 
-import prefix from "Config";
+import prefix from "./Config";
 
 let Home = () => (
     <div className="home_content">

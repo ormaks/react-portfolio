@@ -10,14 +10,12 @@
   "scripts": {
     "build": "webpack -p",
     "watch": "webpack -d --watch",
-
     "start": "npm-run-all --parallel webpack:build server",
     "webpack:build": "webpack -p --watch",
     "server": "node server.js",
-
     "production": "NODE_ENV=production webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d static",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import '../../css/header.scss';
 import '../vendor/FontAwesome';
 
-import prefix from "Config";
+import prefix from "./Config";
 
 const MyLink = ({to, className = "", children = []}) => {
     return (
