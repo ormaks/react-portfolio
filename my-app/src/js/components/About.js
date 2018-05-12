@@ -10,15 +10,15 @@ let About = () => (
 				<span className="text_h1"> About me </span> <br/>
 				<span className="tag_h1">&lt;h1/&gt;</span> <br/>
 
-				<p>Hello, I am 20-year-old student from Ukraine.</p>
+				<p>Hello, I am 20-year-old developer from Ukraine.</p>
 				<p>Everything started with passion to web technologies (HTML, CSS). In 2016 I started to learn all
 					about web development.</p>
-				<p>Year later I got my first commercial work as a junior front-end developer in small agency located
+				<p>Year later I got my first commercial work as a junior front-end developer in a small agency located
 					in UA, Lviv.
 					There I first got acquainted with Angular.</p>
 				<p>Having worked there for a couple of months I changed the job. It was a German company and I was
 					as freelancer for a long-term job.</p>
-				<p>In multinational team we where building large Single Page Application like HR tool using
+				<p>In multinational team we were building large Single Page Application like HR tool using
 					React.</p>
 				<p>Now I'm testing myself in freelance, but I'm open to any suggestions!</p>
 			</div>
