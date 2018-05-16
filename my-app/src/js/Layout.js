@@ -3,8 +3,7 @@ import {Redirect, Route, Switch} from "react-router";
 // import {Redirect, Route, Switch} from "react-router-dom";
 import {About, Contact, Header, Home, Skills} from '../js/components';
 
-const prefix = "/react-portfolio";
-// const prefix = "";
+import prefix from "./components/Config";
 
 //todo browserHistory
 let Layout = () => (
