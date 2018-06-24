@@ -15,8 +15,7 @@
 .thecube {
 	width: 75px;
 	height: 75px;
-	margin: 0 auto;
-	margin-top: 50px;
+	margin: 50px auto 0;
 	position: relative;
 	-webkit-transform: rotateZ(45deg);
 	transform: rotateZ(45deg);
@@ -46,8 +45,8 @@
 	width: 100%;
 	height: 100%;
 	background-color: #08fdd8;
-	-webkit-animation: foldthecube 2.4s infinite linear both;
-	animation: foldthecube 2.4s infinite linear both;
+	-webkit-animation: foldthecube 2.3s infinite linear both;
+	animation: foldthecube 2.3s infinite linear both;
 	-webkit-transform-origin: 100% 100%;
 	-ms-transform-origin: 100% 100%;
 	transform-origin: 100% 100%;
@@ -116,7 +115,6 @@
 	width: 100%;
 	position: relative;
 	z-index: 10;
-
 	background-color: #55708d;
 }
 
@@ -133,7 +131,6 @@
 	max-width: 100%;
 	height: 100%;
 	float: right;
-
 }
 
 .progress-bar .glow::before,
@@ -153,7 +150,7 @@
 
 .progress-bar .glow::after {
 	background: linear-gradient(to right, #252627 0%, transparent 100%);
-	height: calc(100% + 10px + 10px);
+	height: calc(100% + 20px);
 	width: calc(100% + 10px);
 	top: -10px;
 	left: -10px;
@@ -171,7 +168,7 @@
 }
 
 .fill-1 {
-	animation: fill-1 2s linear 0s;
+	animation: fill-1 1.8s linear;
 	animation-fill-mode: forwards;
 	width: 0;
 }
@@ -186,7 +183,7 @@
 }
 
 .label.one {
-	animation: label 0.5s ease-out 0s;
+	animation: label 0.5s ease-out;
 	animation-fill-mode: forwards;
 	opacity: 0;
 }
@@ -202,15 +199,4 @@
 	}
 }
 
-/*
-.preloader_conent .wrapper {
-	max-width: 600px;
-	margin: 0 auto;
-}
-.preloader_conent .wrapper .container {
-	padding: 20px;
-}
-.preloader_conent .wrapper .container > * {
-	margin-bottom: 10px;
-}*/
 

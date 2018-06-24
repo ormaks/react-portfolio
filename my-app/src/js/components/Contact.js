@@ -4,6 +4,7 @@ import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps"
 import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
 import {VelocityComponent} from 'velocity-react';
 import validator from 'validator'
+import PreloaderElement from './PreloaderElement'
 
 import '../../css/contact.scss';
 import prefix from "./Config";
@@ -328,8 +329,13 @@ class Contact extends Component {
                 email: false,
                 msg: false,
             },
+            isLoading: true
         };
     };
+
+    componentDidMount() {
+        setTimeout(() => this.setState({isLoading: false}), 2000);
+    }
 
     handleMsgChange = (evt) => {
         this.setState({msg: evt.target.value});
@@ -385,42 +391,45 @@ class Contact extends Component {
             return hasError ? shouldShow : false;
         };
         /*END VALIDATION p1*/
-
-        return <div className="contact_content">
-            <div style={defaultProps.flyLetterStyles.letters}>
-                {
-                    this.state.letters
-                }
-            </div>
-            <span className="tags">&nbsp;&nbsp;&nbsp;&lt;body&gt;</span>
-            <div className="contact_main">
-                <div className="left_side">
-                    <span className="tag_h1">&lt;h1&gt;</span> <br/>
-                    <span className="text_h1"> Contact </span> <br/>
-                    <span className="tag_h1">&lt;h1/&gt;</span> <br/>
-                    <p style={{color: "red"}}>This form is UI Demo</p>
-                    <form id="contact" autoComplete="off">
-                        <div className="input_row">
-                            <div className="half">
-                                <input onChange={this.onChange} placeholder="Name" type="text" name="name"/>
+        if (this.state.isLoading) {
+            return <PreloaderElement/>
+        }
+        return (
+            <div className="contact_content">
+                <div style={defaultProps.flyLetterStyles.letters}>
+                    {
+                        this.state.letters
+                    }
+                </div>
+                <span className="tags">&nbsp;&nbsp;&nbsp;&lt;body&gt;</span>
+                <div className="contact_main">
+                    <div className="left_side">
+                        <span className="tag_h1">&lt;h1&gt;</span> <br/>
+                        <span className="text_h1"> Contact </span> <br/>
+                        <span className="tag_h1">&lt;h1/&gt;</span> <br/>
+                        <p style={{color: "red"}}>This form is UI Demo</p>
+                        <form id="contact" autoComplete="off">
+                            <div className="input_row">
+                                <div className="half">
+                                    <input onChange={this.onChange} placeholder="Name" type="text" name="name"/>
+                                </div>
+                                <div className="half">
+                                    <input
+                                        className={shouldMarkError('email') ? "error" : ""}
+                                        type="email"
+                                        placeholder="Email"
+                                        value={this.state.email}
+                                        onChange={this.handleEmailChange}
+                                        onBlur={this.handleBlur('email')}
+                                        required
+                                    />
+                                </div>
                             </div>
-                            <div className="half">
-                                <input
-                                    className={shouldMarkError('email') ? "error" : ""}
-                                    type="email"
-                                    placeholder="Email"
-                                    value={this.state.email}
-                                    onChange={this.handleEmailChange}
-                                    onBlur={this.handleBlur('email')}
-                                    required
-                                />
+                            <div className="input_row">
+                                <input onChange={this.onChange} placeholder="Subject" type="text"
+                                       name="subject"/>
                             </div>
-                        </div>
-                        <div className="input_row">
-                            <input onChange={this.onChange} placeholder="Subject" type="text"
-                                   name="subject"/>
-                        </div>
-                        <div className="input_row">
+                            <div className="input_row">
 							<textarea placeholder="Message" name="msg" required
                                       type="text"
                                       minLength="10"
@@ -428,18 +437,19 @@ class Contact extends Component {
                                       value={this.state.msg}
                                       onChange={this.handleMsgChange}
                                       onBlur={this.handleBlur('msg')}/>
-                        </div>
-                        <div className="input_submit">
-                            <input id="submit" type="submit" className="" value="SEND"/>
-                        </div>
-                    </form>
+                            </div>
+                            <div className="input_submit">
+                                <input id="submit" type="submit" className="" value="SEND"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div className="right_side">
+                        <StyledMapWithAnInfoBox/>
+                    </div>
                 </div>
-                <div className="right_side">
-                    <StyledMapWithAnInfoBox/>
-                </div>
+                <span className="tags">&nbsp;&nbsp;&nbsp;&lt;/body&gt; <br/> &lt;/html&gt;</span>
             </div>
-            <span className="tags">&nbsp;&nbsp;&nbsp;&lt;/body&gt; <br/> &lt;/html&gt;</span>
-        </div>;
+        )
     }
 }
 

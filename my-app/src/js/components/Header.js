@@ -50,7 +50,7 @@ class Header extends Component {
                         className="fab fa-facebook-f"/></Link>
                     <Link to="https://www.instagram.com/maks_chytailo" target='_blank'><i
                         className="fab fa-instagram"/></Link>
-                    <Link to="https://t.me/ormakss" target='_blank'><i
+                    <Link to="https://t.me/ormaks" target='_blank'><i
                         className="fab fa-telegram-plane"/></Link>
                 </div>
                 <div className="burger_menu">
