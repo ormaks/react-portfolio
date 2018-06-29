@@ -334,7 +334,7 @@ class Contact extends Component {
     };
 
     componentDidMount() {
-        setTimeout(() => this.setState({isLoading: false}), 2000);
+        setTimeout(() => this.setState({isLoading: false}), 1500);
     }
 
     handleMsgChange = (evt) => {

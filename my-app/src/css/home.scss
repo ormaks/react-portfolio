@@ -1,3 +1,5 @@
+$mainColor: #08fdd8;
+
 /* |||         MAIN DIV         |||*/
 .home_content {
   height: 100%;
@@ -29,13 +31,13 @@
       }
 
       .contact_btn {
-        color: #08fdd8;
+        color: $mainColor;
         font-size: 13px;
         letter-spacing: 3px;
         font-family: "Open Sans", sans-serif;
         text-decoration: none;
         padding: 8px 12px;
-        border: 1px solid #08fdd8;
+        border: 1px solid $mainColor;
         margin-top: 25px;
         float: left;
         border-radius: 3px;
@@ -44,7 +46,7 @@
         z-index: 2;
 
         &:hover {
-          background: #08fdd8;
+          background: $mainColor;
           color: #252627;
         }
       }
@@ -74,7 +76,7 @@
           font-size: 250px;
           &.path {
             fill: #222324;
-            stroke: #08fdd8;
+            stroke: $mainColor;
           }
         }
       }
@@ -111,7 +113,7 @@
 
 @keyframes dash {
   0% {
-    stroke-dashoffset: 1200;
+    stroke-dashoffset: 1200px;
     fill-opacity: 0;
   }
   80% {
@@ -125,7 +127,7 @@
 
 @-moz-keyframes dash {
   0% {
-    stroke-dashoffset: 1200;
+    stroke-dashoffset: 1200px;
     fill-opacity: 0
   }
   80% {
@@ -139,7 +141,7 @@
 
 @-webkit-keyframes dash {
   0% {
-    stroke-dashoffset: 1200;
+    stroke-dashoffset: 1200px;
     fill-opacity: 0
   }
   80% {
@@ -324,7 +326,7 @@
         opacity: 0.02;
         position: initial;
       }
-      svg.logo ,
+      svg.logo,
       svg.logo_mirror {
         display: none;
       }
@@ -332,7 +334,8 @@
   }
 }
 
-@media only screen and (min-width: 481px/*768px*/) and (max-width: 1024px) {
+@media only screen and (min-width: 481px /*768px*/
+) and (max-width: 1024px) {
   .home_content {
     width: 100%;
     height: 100vh;

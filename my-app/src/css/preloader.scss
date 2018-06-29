@@ -45,8 +45,8 @@
 	width: 100%;
 	height: 100%;
 	background-color: #08fdd8;
-	-webkit-animation: foldthecube 2.3s infinite linear both;
-	animation: foldthecube 2.3s infinite linear both;
+	-webkit-animation: foldthecube 1.8s infinite linear both;
+	animation: foldthecube 1.8s infinite linear both;
 	-webkit-transform-origin: 100% 100%;
 	-ms-transform-origin: 100% 100%;
 	transform-origin: 100% 100%;
@@ -168,7 +168,7 @@
 }
 
 .fill-1 {
-	animation: fill-1 1.8s linear;
+	animation: fill-1 1.3s linear;
 	animation-fill-mode: forwards;
 	width: 0;
 }
