@@ -26,17 +26,17 @@
       display: block;
       max-height: 90%;
 
-      p {
+      .left_side_text {
         font-size: 12px;
         line-height: 18px;
         color: #ffffff;
         font-family: monospace, sans-serif;
 
-        a {
-          color: #08fdd8;
-          &:hover {
-            text-decoration: none;
-          }
+      }
+      .left_side_link {
+        color: #08fdd8;
+        &:hover {
+          text-decoration: none;
         }
       }
     }
@@ -98,7 +98,8 @@
   }
 }
 
-@media only screen and (min-width: 481px/*768px*/) and (max-width: 1024px) {
+@media only screen and (min-width: 481px /*768px*/
+) and (max-width: 1024px) {
   .skills_content {
     left: 0;
     top: 70px;

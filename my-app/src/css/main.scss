@@ -61,6 +61,15 @@ body .infoBox {
   border-bottom: 2px solid red !important;
 }
 
+.animated {
+  display: inline-block;
+}
+
+.space {
+  width: 10px;
+  display: inline-block;
+}
+
 @font-face {
   font-family: 'MyTags';
   src: url('../fonts/LaBelleAurore.ttf') format("truetype");
@@ -102,7 +111,8 @@ body .infoBox {
   }
 }
 
-@media only screen and (min-width: 481px/*768px*/) and (max-width: 1024px) {
+@media only screen and (min-width: 481px /*768px*/
+) and (max-width: 1024px) {
   body {
     overflow: inherit;
   }

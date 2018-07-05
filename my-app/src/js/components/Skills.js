@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import PreloaderElement from './PreloaderElement'
+import PreloaderElement from './PreloaderElement';
+
 
 import '../../css/skills.scss';
 import '../vendor/tagcanvas.min';
+import 'animate.css';
 import prefix from "./Config";
 
 const skills = [
@@ -29,8 +31,84 @@ const skills = [
     "Bootstrap",
     "XML",
     "SVG",
-    "Node.js"
+    "Node.js",
+    "Gulp"
 ];
+
+
+class AnimatedText extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isHovered: false
+        };
+
+        console.log("ANNN " + this.props.text);
+    }
+
+    propTypes = {
+        text: PropTypes.string.isRequired,
+        tagName: PropTypes.string,
+        to: PropTypes.string,
+        target: PropTypes.string,
+    };
+    handleHoverIn = () => {
+        this.setState({
+            isHovered: true
+        });
+        setTimeout(() => this.setState({
+            isHovered: false
+        }), 1000);
+    };
+
+    render() {
+        return (<span className={"animated" + (this.state.isHovered ? " rubberBand" : "")}
+                      onMouseEnter={this.handleHoverIn}>{this.props.text}</span>
+        )
+    }
+}
+
+class TextSplit extends Component {
+    constructor(props) {
+        super(props);
+
+        console.log(this.props.children);
+    }
+
+    propTypes = {
+        splitBy: PropTypes.string,
+        className: PropTypes.string,
+        tagName: PropTypes.string,
+        to: PropTypes.string,
+        target: PropTypes.string,
+    };
+
+    render() {
+        let splitBy = '';
+        if (this.props.splitBy === "words") {
+            splitBy = ' '
+        }
+        if (this.props.tagName === 'link') {
+            return <Link to={this.props.to} target={this.props.target} className={this.props.className}>
+                <AnimatedText to={this.props.to}
+                              target={this.props.target}
+                              tagName={this.props.tagName}
+                              text={this.props.children}/>
+            </Link>;
+        }
+        else
+            return (
+                <p className={this.props.className}>
+                    {this.props.children.split(splitBy).map((letter, key) => {
+                        if (letter === ' ')
+                            return <span key={key} className="space"/>;
+                        else
+                            return <AnimatedText key={key} text={letter}/>;
+                    })}
+                </p>
+            )
+    }
+}
 
 class Sphere extends Component {
     static defaultProps = {
@@ -89,14 +167,18 @@ class Sphere extends Component {
 class Skills extends Component {
     constructor() {
         super();
-        this.state = {isLoading: true}
+        this.state = {
+            isLoading: true,
+        };
     }
 
     componentDidMount() {
         setTimeout(() => this.setState({isLoading: false}), 1500);
+        // var elements = document.querySelectorAll('.text_h1');
     }
 
     render() {
+
         if (this.state.isLoading) {
             return <PreloaderElement/>
         }
@@ -106,20 +188,24 @@ class Skills extends Component {
                 <div className="skills_main">
                     <div className="left_side">
                         <span className="tag_h1">&lt;h1&gt;</span> <br/>
-                        <span className="text_h1"> Skills & </span> <br/>
-                        <span className="text_h1"> Experience </span> <br/>
+                        <TextSplit className="text_h1">Skills &</TextSplit>
+                        <TextSplit className="text_h1">Experience</TextSplit>
                         <span className="tag_h1">&lt;h1/&gt;</span> <br/>
-                        <p>Main area of my expertise is front end development and everything related with this side of
-                            web.
-                            HTML, CSS, JS(ES5,ES6), building Web Apps, ReactJS, building features, animations and just
-                            coding
-                            layouts.</p>
-                        <p>I have also some experience with Angular, Django, Node.js.</p>
-                        <p>Would like to know more?<br/>
-                            Please check my <Link to="https://www.linkedin.com/in/ormaks/"
-                                                  target='_blank'>LinkedIn</Link> profile or just <Link
-                                to={prefix + "/contact"}>contact</Link> me.
-                        </p>
+                        <TextSplit className='left_side_text' splitBy="words">Main area of my expertise is front end
+                            development and everything related with this side of
+                            web. HTML, CSS, JS(ES5,ES6), building Web Apps, ReactJS, building features, animations and
+                            just coding layouts.</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words">I have also some experience with Angular,
+                            Django,
+                            Node.js.</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words">Would like to know more?</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words"> Please check my </TextSplit>
+                        <TextSplit tagName='link' splitBy="words" to="https://www.linkedin.com/in/ormaks/"
+                                   target='_blank' className='left_side_link'>LinkedIn</TextSplit>
+                        <TextSplit className='left_side_text' splitBy='words'> profile or just </TextSplit>
+                        <TextSplit tagName='link' splitBy="words" to={prefix + "/contact"}
+                                   className='left_side_link'>contact</TextSplit>
+                        <TextSplit className='left_side_text' splitBy='words'> me.</TextSplit>
                     </div>
                     <div className="right_side">
                         <Sphere id={'mySkills'} width={550} height={500} items={skills}/>

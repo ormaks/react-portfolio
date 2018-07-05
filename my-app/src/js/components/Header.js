@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../css/header.scss';
-import '../vendor/FontAwesome';
+import '../vendor/FontAwesome.min';
 
 import prefix from "./Config";
 

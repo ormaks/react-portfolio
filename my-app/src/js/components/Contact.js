@@ -439,7 +439,7 @@ class Contact extends Component {
                                       onBlur={this.handleBlur('msg')}/>
                             </div>
                             <div className="input_submit">
-                                <input id="submit" type="submit" className="" value="SEND"/>
+                                <input id="submit" type="submit" value="SEND"/>
                             </div>
                         </form>
                     </div>
