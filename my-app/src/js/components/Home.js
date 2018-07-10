@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../css/home.scss';
-import PreloaderElement from './PreloaderElement';
-import {TextSplit} from './Skills';
+import PreloaderElement from '../containers/PreloaderElement';
+import TextSplit from '../containers/TextAnimation';
 
 import prefix from "./Config";
 

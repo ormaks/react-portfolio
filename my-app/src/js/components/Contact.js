@@ -4,8 +4,8 @@ import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps"
 import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
 import {VelocityComponent} from 'velocity-react';
 import validator from 'validator';
-import PreloaderElement from './PreloaderElement';
-import {TextSplit} from './Skills';
+import PreloaderElement from '../containers/PreloaderElement';
+import TextSplit from '../containers/TextAnimation';
 
 import '../../css/contact.scss';
 import prefix from "./Config";
@@ -406,7 +406,7 @@ class Contact extends Component {
                 <div className="contact_main">
                     <div className="left_side">
                         <span className="tag_h1">&lt;h1&gt;</span> <br/>
-                        <TextSplit className="text_h1"> Contact </TextSplit> <br/>
+                        <TextSplit className="text_h1">Contact</TextSplit>
                         <span className="tag_h1">&lt;h1/&gt;</span> <br/>
                         <TextSplit splitBy='words' className='left_side_text'>This form is UI Demo</TextSplit>
                         <form id="contact" autoComplete="off">

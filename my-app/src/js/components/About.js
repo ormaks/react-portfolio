@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../css/about.scss';
-import PreloaderElement from './PreloaderElement';
-import {TextSplit} from './Skills';
+import PreloaderElement from '../containers/PreloaderElement';
+import TextSplit from '../containers/TextAnimation';
 
 class About extends Component {
     constructor() {
