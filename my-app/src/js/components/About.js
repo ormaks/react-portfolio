@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../../css/about.scss';
-import PreloaderElement from './PreloaderElement'
+import PreloaderElement from './PreloaderElement';
+import {TextSplit} from './Skills';
 
 class About extends Component {
     constructor() {
@@ -22,23 +23,24 @@ class About extends Component {
                 <div className="about_main">
                     <div className="left_side">
                         <span className="tag_h1">&lt;h1&gt;</span> <br/>
-                        <span className="text_h1"> About me </span> <br/>
+                        <TextSplit className="text_h1">About me</TextSplit>
                         <span className="tag_h1">&lt;h1/&gt;</span> <br/>
 
-                        <p>Hello, I am 20-year-old developer from Ukraine.</p>
-                        <p>Everything started with passion to web technologies (HTML, CSS). In 2016 I started to learn
-                            all
-                            about web development.</p>
-                        <p>Year later I got my first commercial work as a junior front-end developer in a small agency
-                            located
-                            in UA, Lviv.
-                            There I first got acquainted with Angular.</p>
-                        <p>Having worked there for a couple of months I changed the job. It was a German company and I
-                            was
-                            as freelancer for a long-term job.</p>
-                        <p>In multinational team we were building large Single Page Application like HR tool using
-                            React.</p>
-                        <p>Now I'm testing myself in freelance, but I'm open to any suggestions!</p>
+                        <TextSplit className='left_side_text' splitBy="words">Hello, I am 20-year-old developer from
+                            Ukraine.</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words">Everything started with passion to web
+                            technologies (HTML, CSS). In 2016 I started to learn all about web development.</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words">Year later I got my first commercial work
+                            as a junior front-end developer in a small agency located in UA, Lviv. There I first got
+                            acquainted with Angular.</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words">Having worked there for a couple of months
+                            I changed the job. It was a German company and I was as freelancer for a long-term
+                            job.</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words">In multinational team we were building
+                            large Single Page Application like HR tool using
+                            React.</TextSplit>
+                        <TextSplit className='left_side_text' splitBy="words">Now I'm testing myself in freelance, but
+                            I'm open to any suggestions!</TextSplit>
                     </div>
                     <div className="player">
                         <iframe className="insta_iframe" width="320" height="440" title="instaPage"

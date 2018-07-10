@@ -23,11 +23,12 @@
 
     .left_side {
       width: 50%;
-      p {
+      p.left_side_text {
         font-size: 12px;
         line-height: 18px;
         color: #ffffff;
         font-family: monospace, sans-serif;
+        margin: 12px 0;
       }
     }
 
@@ -105,7 +106,8 @@
   }
 }
 
-@media only screen and (min-width: 481px/*768px*/) and (max-width: 1024px) {
+@media only screen and (min-width: 481px /*768px*/
+) and (max-width: 1024px) {
   .about_content {
     left: 0;
     top: 70px;

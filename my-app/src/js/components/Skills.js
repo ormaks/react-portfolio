@@ -194,7 +194,7 @@ class Skills extends Component {
                         <TextSplit className="text_h1">Skills &</TextSplit>
                         <TextSplit className="text_h1">Experience</TextSplit>
                         <span className="tag_h1">&lt;h1/&gt;</span> <br/>
-                        <TextSplit className='left_side_text' splitBy="words">Main area of my expertise is front end
+                        <TextSplit splitBy="words" className='left_side_text'>Main area of my expertise is front end
                             development and everything related with this side of
                             web. HTML, CSS, JS(ES5,ES6), building Web Apps, ReactJS, building features, animations and
                             just coding layouts.</TextSplit>
@@ -223,4 +223,4 @@ class Skills extends Component {
 }
 
 export default Skills;
-export {Sphere};
+export {Sphere, TextSplit};

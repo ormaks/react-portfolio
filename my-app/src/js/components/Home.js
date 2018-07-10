@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../css/home.scss';
-import PreloaderElement from './PreloaderElement'
+import PreloaderElement from './PreloaderElement';
+import {TextSplit} from './Skills';
 
 import prefix from "./Config";
 
@@ -26,9 +27,9 @@ class Home extends Component {
                     <span className="tags">&nbsp;&nbsp;&nbsp;&lt;body&gt;</span>
                     <div className="home_main">
                         <span className="tag_h1">&lt;h1&gt;</span> <br/>
-                        <span className="text_h1"> Hi,</span> <br/>
-                        <span className="text_h1"> I'm Maks,</span><br/>
-                        <span className="text_h1"> web developer. </span>
+                        <TextSplit className="text_h1">Hi,</TextSplit>
+                        <TextSplit className="text_h1">I'm Maks,</TextSplit>
+                        <TextSplit className="text_h1">web developer. </TextSplit>
                         <span className="tag_h1">&lt;h1/&gt;</span> <br/>
                         <h2 className="h2_greating">Front End Developer / React / Angular</h2>
                         <Link to={prefix + "/contact"} className="contact_btn">Contact me</Link>

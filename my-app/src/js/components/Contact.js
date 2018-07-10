@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {compose, withProps, withStateHandlers} from "recompose"
+import {compose, withProps, withStateHandlers} from "recompose";
 import {GoogleMap, Marker, withGoogleMap, withScriptjs} from "react-google-maps";
 import InfoBox from "react-google-maps/lib/components/addons/InfoBox";
 import {VelocityComponent} from 'velocity-react';
-import validator from 'validator'
-import PreloaderElement from './PreloaderElement'
+import validator from 'validator';
+import PreloaderElement from './PreloaderElement';
+import {TextSplit} from './Skills';
 
 import '../../css/contact.scss';
 import prefix from "./Config";
@@ -405,9 +406,9 @@ class Contact extends Component {
                 <div className="contact_main">
                     <div className="left_side">
                         <span className="tag_h1">&lt;h1&gt;</span> <br/>
-                        <span className="text_h1"> Contact </span> <br/>
+                        <TextSplit className="text_h1"> Contact </TextSplit> <br/>
                         <span className="tag_h1">&lt;h1/&gt;</span> <br/>
-                        <p style={{color: "red"}}>This form is UI Demo</p>
+                        <TextSplit splitBy='words' className='left_side_text'>This form is UI Demo</TextSplit>
                         <form id="contact" autoComplete="off">
                             <div className="input_row">
                                 <div className="half">

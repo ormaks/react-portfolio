@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../css/notFound.scss';
+import {TextSplit} from './Skills';
 import prefix from "./Config";
 
 class NotFound extends Component {
@@ -37,10 +38,10 @@ class NotFound extends Component {
                         <div className="error_text"
                              onMouseEnter={this.onEnter}
                              onMouseLeave={this.onLeave}>
-                            <div className="error_number">404</div>
+                            <TextSplit className="error_number">404</TextSplit>
                             <br/><br/>
-                            <span className="info">File not found</span>
-                            <span className="info_click">Click here to go home</span>
+                            <TextSplit className="info">File not found</TextSplit>
+                            <TextSplit className="info_click">Click here to go home</TextSplit>
                         </div>
                     </Link>
 
