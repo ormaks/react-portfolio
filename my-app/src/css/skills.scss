@@ -27,11 +27,14 @@
       max-height: 90%;
 
       .left_side_text {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         font-size: 12px;
         line-height: 18px;
         color: #ffffff;
         font-family: monospace, sans-serif;
-
+        margin: 12px 0;
       }
       .left_side_link {
         color: #08fdd8;

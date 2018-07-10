@@ -51,6 +51,7 @@ class AnimatedText extends Component {
         tagName: PropTypes.string,
         to: PropTypes.string,
         target: PropTypes.string,
+        splitBy: PropTypes.string,
     };
     handleHoverIn = () => {
         this.setState({
@@ -62,8 +63,9 @@ class AnimatedText extends Component {
     };
 
     render() {
-        return (<span className={"animated" + (this.state.isHovered ? " rubberBand" : "")}
-                      onMouseEnter={this.handleHoverIn}>{this.props.text}</span>
+        return (<span
+                className={"animated" + (this.state.isHovered ? " rubberBand" : "") + (this.props.splitBy === ' ' ? " split-words" : "")}
+                onMouseEnter={this.handleHoverIn}>{this.props.text}</span>
         )
     }
 }
@@ -89,7 +91,8 @@ class TextSplit extends Component {
             splitBy = ' '
         }
         if (this.props.tagName === 'link') {
-            return <Link to={this.props.to} target={this.props.target} className={this.props.className}>
+            return <Link to={this.props.to} target={this.props.target}
+                         className={this.props.className + (splitBy === ' ' ? " split-words" : "")}>
                 <AnimatedText to={this.props.to}
                               target={this.props.target}
                               tagName={this.props.tagName}
@@ -103,7 +106,7 @@ class TextSplit extends Component {
                         if (letter === ' ')
                             return <span key={key} className="space"/>;
                         else
-                            return <AnimatedText key={key} text={letter}/>;
+                            return <AnimatedText splitBy={splitBy} key={key} text={letter}/>;
                     })}
                 </p>
             )
@@ -199,13 +202,15 @@ class Skills extends Component {
                             Django,
                             Node.js.</TextSplit>
                         <TextSplit className='left_side_text' splitBy="words">Would like to know more?</TextSplit>
-                        <TextSplit className='left_side_text' splitBy="words"> Please check my </TextSplit>
-                        <TextSplit tagName='link' splitBy="words" to="https://www.linkedin.com/in/ormaks/"
-                                   target='_blank' className='left_side_link'>LinkedIn</TextSplit>
-                        <TextSplit className='left_side_text' splitBy='words'> profile or just </TextSplit>
-                        <TextSplit tagName='link' splitBy="words" to={prefix + "/contact"}
-                                   className='left_side_link'>contact</TextSplit>
-                        <TextSplit className='left_side_text' splitBy='words'> me.</TextSplit>
+                        <p className='left_side_text'>
+                            <TextSplit splitBy="words">Please check my</TextSplit>
+                            <TextSplit tagName='link' splitBy="words" to="https://www.linkedin.com/in/ormaks/"
+                                       target='_blank' className='left_side_link'>LinkedIn</TextSplit>
+                            <TextSplit splitBy='words'>profile or just</TextSplit>
+                            <TextSplit tagName='link' splitBy="words" to={prefix + "/contact"}
+                                       className='left_side_link'>contact</TextSplit>
+                            <TextSplit splitBy='words'>me.</TextSplit>
+                        </p>
                     </div>
                     <div className="right_side">
                         <Sphere id={'mySkills'} width={550} height={500} items={skills}/>
